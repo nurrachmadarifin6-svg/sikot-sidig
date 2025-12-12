@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Sikot</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Selamat Datang Rekan Rekanita Admin</h1>
+    </header>
+    <section id="dashboard" class="dashboard-section" style="display: none">
+      <h2>Dashboard Admin Divisi</h2>
+
+      <div class="dashboard-grid">
+        <a href="/admin/divisi/administrasi/administrasi.html" class="dash-card"
+          >ADMINISTRASI</a
+        >
+        <a href="/admin/divisi/organisasi/organisasi.html" class="dash-card"
+          >ORGANISASI</a
+        >
+        <a href="/admin/divisi/kaderisasi/kaderisasi.html" class="dash-card"
+          >KADERISASI</a
+        >
+        <a href="/admin/divisi/djsp/djsp.html" class="dash-card">DJSP</a>
+        <a href="/admin/divisi/dakwah/dakwah.html" class="dash-card">DAKWAH</a>
+        <a href="/admin/divisi/dosb/dosb.html" class="dash-card">DOSB</a>
+        <a href="/admin/divisi/pers/pers.html" class="dash-card">PERS</a>
+      </div>
+    </section>
+    <!-- LOGIN ADMIN -->
+    <section id="loginBox" class="box">
+      <h2>Login Admin</h2>
+      <div class="password-wrapper">
+        <input
+          type="password"
+          id="adminPass"
+          placeholder="Masukkan Password Admin"
+        />
+       <span class="toggle-pass" onclick="togglePassword()">
+  👁️
+</span>
+
+      </div>
+      <button onclick="loginAdmin()">Login</button>
+    </section>
+
+    <!-- FORM TAMBAH DOKUMEN -->
+    <section id="adminDocForm" class="box" style="display: none">
+      <h2 class="title">Upload File Contoh Surat</h2>
+
+      <div class="upload-box">
+        <input type="file" id="docInput" />
+        <button onclick="uploadDoc()">Upload</button>
+      </div>
+
+      <h2 class="title">Daftar Dokumen</h2>
+
+      <div id="docContainer" class="grid"></div>
+    </section>
+
+    <!-- FORM TAMBAH BUKU PEDOMAN -->
+    <section id="adminPedomanForm" class="box" style="display: none">
+      <h2 class="title">Upload File Pedoman</h2>
+
+      <div class="upload-box">
+        <input type="file" id="pedomanInput" />
+        <button onclick="uploadPedoman()">Upload</button>
+      </div>
+
+      <h2 class="title">Daftar Pedoman</h2>
+
+      <div id="pedomanContainer" class="grid"></div>
+    </section>
+
+    <!-- SARAN & MASUKAN -->
+    <section id="saranBox" class="box" style="display: none">
+      <h2>Daftar Saran & Masukan</h2>
+      <div id="output"></div>
+    </section>
+
+    <button id="logoutBtn">Logout</button>
+
+    <a class="box" href="/html/index.html">← Kembali</a>
+    <script src="/admin/admin.js"></script>
+  </body>
+</html>

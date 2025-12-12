@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Kegiatan Makesta</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h2>Admin Data Kegiatan Agenda Makesta</h2>
+
+    <!-- ===========================
+        TABLE DATA
+  ============================ -->
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Tanggal Pelaksanaan</th>
+          <th>Nama Ketua Pelaksana</th>
+          <th>Jumlah Peserta</th>
+          <th>Sasaran</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- ===========================
+        FORM TAMBAH DATA
+  ============================ -->
+    <h3>Tambah Data Baru</h3>
+    <form id="addForm">
+      <input name="tanggal" type="date" required />
+      <input name="nama" placeholder="Ketua Pelaksana" required />
+      <input name="jumlah" placeholder="Jumlah Peserta" required />
+      <input name="sasaran" placeholder="Sasaran" required />
+
+      <button type="submit">Tambah</button>
+    </form>
+
+    <a class="back-btn" href="/admin/divisi/kaderisasi/kaderisasi.html"
+      >← Kembali</a
+    >
+
+    <script src="script.js"></script>
+  </body>
+</html>

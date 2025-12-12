@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload & Arsip Notulensi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 class="title">Upload Notulensi</h2>
+
+    <div class="upload-box">
+      <input type="file" id="fileInput" />
+      <button onclick="uploadFile()">Upload</button>
+    </div>
+
+    <h2 class="title">Daftar Notulensi</h2>
+
+    <div id="documentContainer" class="grid"></div>
+
+    <a class="back-btn" href="/admin/divisi/administrasi/administrasi.html"
+      >← Kembali</a
+    >
+
+    <script src="/admin/divisi/administrasi/notulensi/script.js"></script>
+  </body>
+</html>

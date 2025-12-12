@@ -1,0 +1,177 @@
+/* ================================
+   THEME VARIABLE
+================================ */
+:root {
+  --neon: #00fff2;
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(0, 255, 255, 0.25);
+  --white: #fff;
+}
+
+/* ================================
+   GLOBAL
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: var(--white);
+  padding: 20px;
+}
+
+/* ================================
+   NOTULENSI BOX (Daftar Inventaris)
+================================ */
+.notulensi {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  padding: 25px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.12);
+}
+
+.notulensi h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--neon);
+  text-shadow: 0 0 12px var(--neon);
+}
+
+.notulensi p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+.notulensi-section {
+  margin-top: 15px;
+}
+
+/* ================================
+   INVENTARIS FORM SECTION
+================================ */
+.inventaris-section {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  padding: 25px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.12);
+}
+
+.inventaris-section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--neon);
+  text-shadow: 0 0 12px var(--neon);
+  margin-bottom: 20px;
+}
+
+/* ================================
+   FORM INPUT
+================================ */
+.inventaris-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inventaris-form label {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.inventaris-form input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  background: rgba(0, 0, 0, 0.65);
+  color: var(--white);
+  font-size: 1rem;
+  outline: none;
+  transition: 0.25s ease;
+}
+
+.inventaris-form input:focus {
+  border-color: var(--neon);
+  box-shadow: 0 0 10px var(--neon);
+}
+
+/* ================================
+   BUTTON
+================================ */
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: var(--neon);
+  color: #000;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  box-shadow: 0 0 20px var(--neon), 0 0 40px var(--neon);
+  transform: translateY(-3px);
+}
+
+#inventaris-status {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* ================================
+   BACK BUTTON
+================================ */
+.back-btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 12px 20px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  color: var(--white);
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 15px var(--neon);
+  transform: translateY(-3px);
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 540px) {
+  .inventaris-section,
+  .notulensi {
+    padding: 18px;
+  }
+
+  .inventaris-form input {
+    padding: 12px;
+  }
+
+  button {
+    padding: 12px;
+  }
+}

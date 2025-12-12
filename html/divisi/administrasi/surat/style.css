@@ -1,0 +1,145 @@
+/* ================================
+   GLOBAL STYLE
+==================================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --bg-dark: #060b12;
+  --glass: rgba(255, 255, 255, 0.08);
+  --glass-light: rgba(255, 255, 255, 0.15);
+  --border-glow: rgba(255, 255, 255, 0.25);
+  --text-color: #fff;
+  --primary: #00ffc6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-color);
+  padding: 20px;
+}
+
+/* ================================
+   NOTULENSI HEADER SECTION
+==================================*/
+
+.notulensi {
+  background: var(--glass);
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-light);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.notulensi h3 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.notulensi p {
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+/* ================================
+   FORM BOX
+==================================*/
+
+.box {
+  background: var(--glass);
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-light);
+  margin-bottom: 35px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
+}
+
+.box h1 {
+  font-size: 1.7rem;
+  margin-bottom: 18px;
+  color: var(--primary);
+}
+
+/* ================================
+   BUTTON
+==================================*/
+
+button {
+  background: var(--primary);
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   TABLE STYLE
+==================================*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--glass-light);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+table th {
+  background: rgba(0, 255, 200, 0.15);
+  padding: 14px;
+  color: var(--primary);
+  font-size: 1rem;
+  border-bottom: 1px solid var(--border-glow);
+}
+
+table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+table tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ================================
+   BACK BUTTON
+==================================*/
+
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 22px;
+  background: var(--glass-light);
+  border: 1px solid var(--border-glow);
+  border-radius: 12px;
+  color: var(--primary);
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: 0.25s;
+}
+
+.back-btn:hover {
+  background: var(--primary);
+  color: #000;
+  transform: translateX(-4px);
+}

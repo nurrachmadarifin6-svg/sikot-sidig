@@ -1,0 +1,210 @@
+/* ==============================
+   ROOT COLOR
+============================== */
+:root {
+  --primary-color: #05f2d4;
+  --glass-bg: rgba(0, 0, 0, 0.35);
+  --glass-border: rgba(0, 255, 255, 0.35);
+  --neon: #00fff2;
+  --white: #ffffff;
+}
+
+/* ==============================
+   GENERAL
+============================== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #02060a;
+  color: var(--white);
+  margin: 0;
+  padding: 20px;
+}
+
+/* ==============================
+   TITLE & HEADINGS
+============================== */
+.title,
+h1,
+h2 {
+  text-align: center;
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon);
+}
+
+/* ==============================
+   BOX / CONTAINER
+============================== */
+.box {
+  max-width: 480px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--glass-bg);
+  border: 2px solid var(--glass-border);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+/* ==============================
+   INPUT + BUTTON
+============================== */
+input[type="password"],
+input[type="file"],
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 15px;
+  border-radius: 8px;
+  border: 1px solid var(--neon);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+}
+
+input::placeholder {
+  color: #b9ffff;
+}
+
+/* ==============================
+   FIX: PLACEHOLDER TIDAK BERUBAH
+============================== */
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-pass {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--neon);
+
+  /* FIX AGAR TIDAK MENGGANGGU FOKUS INPUT */
+  pointer-events: auto;
+  user-select: none;
+}
+
+/* ==============================
+   BUTTON
+============================== */
+button,
+.logout {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: var(--primary-color);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+button:hover,
+.logout:hover {
+  background: var(--neon);
+  box-shadow: 0 0 12px var(--neon);
+}
+.back-btn,
+a.box[href="/html/index.html"] {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 20px auto;
+  text-align: center;
+
+  background: var(--glass-bg);
+  border: 2px solid var(--glass-border);
+  border-radius: 12px;
+
+  color: var(--neon);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+
+  backdrop-filter: blur(10px);
+
+  transition: 0.25s ease;
+  box-shadow: 0 0 6px rgba(0, 255, 255, 0.2);
+}
+
+.back-btn:hover,
+a.box[href="/html/index.html"]:hover {
+  background: rgba(0, 255, 255, 0.15);
+  color: var(--white);
+  border-color: var(--neon);
+  box-shadow: 0 0 15px var(--neon);
+  transform: translateY(-3px);
+}
+
+/* ==============================
+   DASHBOARD GRID
+============================== */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.dash-card {
+  padding: 20px;
+  text-align: center;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.dash-card:hover {
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 15px var(--neon);
+}
+
+/* ==============================
+   GRID FILE CARD
+============================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: rgba(0, 255, 255, 0.2);
+}
+
+/* ==============================
+   TABLE
+============================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  border: 1px solid var(--glass-border);
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: rgba(0, 255, 255, 0.1);
+}

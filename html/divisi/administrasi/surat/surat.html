@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buku Surat Masuk dan Surat Keluar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="notulensi" class="notulensi">
+      <h3>Buku Surat Masuk dan Surat Keluar</h3>
+      <p>Klik dokumen berikut untuk mengunduh Buku Pedoman Organisasi.</p>
+      <div class="notulensi-section" id="notulensiList"></div>
+    </div>
+    <section id="masukForm" class="box">
+      <h1>Data Surat Masuk</h1>
+
+      <button onclick="loadMasuk()">Reload Data</button>
+
+      <table id="masukTable">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nomor Surat</th>
+            <th>Nama Kegiatan</th>
+            <th>Asal Surat</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="keluarForm" class="box">
+      <h1>Data Surat Keluar</h1>
+
+      <button onclick="loadKeluar()">Reload Data</button>
+
+      <table id="keluarTable">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nomor Surat</th>
+            <th>Nama Kegiatan</th>
+            <th>Tujuan Surat</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <a class="back-btn" href="/html/divisi/administrasi/administrasi.html"
+      >← Kembali</a
+    >
+    <script src="/html/divisi/administrasi/surat/script.js"></script>
+  </body>
+</html>

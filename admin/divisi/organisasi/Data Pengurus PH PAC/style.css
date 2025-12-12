@@ -1,0 +1,257 @@
+/* =========================================
+   ROOT COLOR
+========================================= */
+:root {
+  --primary: #05f2d4;
+  --neon: #00fff2;
+  --neon-soft: rgba(0, 255, 242, 0.4);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(0, 255, 255, 0.35);
+  --white: #fff;
+  --black: #000;
+  --glow-strong: 0 0 25px rgba(0, 255, 242, 0.8);
+  --glow-soft: 0 0 12px rgba(0, 255, 242, 0.4);
+}
+
+/* =========================================
+   GLOBAL STYLE
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #011, #000);
+  color: var(--white);
+  padding: 30px;
+}
+
+/* =========================================
+   PAGE TITLE
+========================================= */
+h2 {
+  color: var(--neon);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-shadow: var(--glow-soft);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   TABLE STYLE – Super Premium
+========================================= */
+#dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 35px;
+
+  background: var(--glass-bg);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(14px);
+
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15), 0 0 60px rgba(0, 255, 255, 0.05),
+    inset 0 0 15px rgba(0, 255, 255, 0.12);
+}
+
+#dataTable thead {
+  background: rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+#dataTable th {
+  color: var(--neon);
+  text-shadow: var(--glow-soft);
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.25);
+}
+
+#dataTable td {
+  padding: 13px;
+  color: var(--white);
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.15);
+  transition: 0.25s ease;
+}
+
+/* Hover row premium */
+#dataTable tbody tr:hover {
+  background: rgba(0, 255, 255, 0.12);
+  transform: scale(1.01);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--glow-soft);
+}
+
+/* =========================================
+   TABLE ACTION BUTTONS
+========================================= */
+.table-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.edit-btn {
+  background: var(--primary);
+  color: #000;
+  box-shadow: 0 0 10px rgba(5, 242, 212, 0.4);
+}
+
+.edit-btn:hover {
+  box-shadow: 0 0 18px var(--primary);
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  background: #ff4d4d;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+}
+
+.delete-btn:hover {
+  box-shadow: 0 0 18px #ff4d4d;
+  transform: scale(1.05);
+}
+
+/* =========================================
+   FORM TITLE
+========================================= */
+h3 {
+  color: var(--neon);
+  text-shadow: var(--glow-soft);
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+/* =========================================
+   FORM WRAPPER (Tambah Data)
+========================================= */
+form {
+  width: 100%;
+  padding: 25px;
+  background: var(--glass-bg);
+  border-radius: 18px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.15),
+    inset 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+/* Input field premium */
+form input {
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--glass-border);
+
+  color: var(--white);
+  font-size: 1rem;
+
+  transition: 0.3s ease;
+}
+
+form input::placeholder {
+  color: var(--primary);
+  opacity: 0.7;
+}
+
+form input:focus {
+  border-color: var(--neon);
+  box-shadow: var(--glow-soft);
+  outline: none;
+}
+
+/* =========================================
+   EDIT MODE INPUT (Inside Table)
+========================================= */
+
+.table-edit-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.table-edit-input::placeholder {
+  color: var(--primary);
+  opacity: 0.7;
+}
+
+.table-edit-input:focus {
+  border-color: var(--neon);
+  box-shadow: 0 0 10px var(--neon);
+  outline: none;
+}
+
+/* =========================================
+   SUBMIT BUTTON (Tambah Data)
+========================================= */
+button {
+  padding: 14px;
+  background: var(--neon);
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: 0.35s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: var(--glow-strong);
+}
+
+/* =========================================
+   BACK BUTTON – Premium Neon Button
+========================================= */
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+
+  padding: 14px 26px;
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--neon);
+
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  transition: 0.35s ease;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2),
+    inset 0 0 8px rgba(0, 255, 255, 0.15);
+}
+
+.back-btn:hover {
+  background: var(--neon);
+  color: #000;
+
+  transform: translateX(-5px) scale(1.05);
+  box-shadow: var(--glow-strong), inset 0 0 15px rgba(0, 0, 0, 0.3);
+}

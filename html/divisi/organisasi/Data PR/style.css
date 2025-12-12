@@ -1,0 +1,144 @@
+/* =========================================
+   ROOT COLOR
+========================================= */
+:root {
+  --primary: #05f2d4;
+  --neon: #00fff2;
+  --neon-soft: rgba(0, 255, 242, 0.4);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(0, 255, 255, 0.35);
+  --white: #fff;
+  --black: #000;
+  --glow-strong: 0 0 25px rgba(0, 255, 242, 0.8);
+  --glow-soft: 0 0 12px rgba(0, 255, 242, 0.4);
+}
+
+/* =========================================
+   GLOBAL STYLE
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #011, #000);
+  color: var(--white);
+  padding: 30px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+h2 {
+  color: var(--neon);
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  text-shadow: var(--glow-soft);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+p {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* =========================================
+   TABLE WRAPPER (Premium Floating Card)
+========================================= */
+#userTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+
+  background: var(--glass-bg);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(14px);
+
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15), 0 0 60px rgba(0, 255, 255, 0.05),
+    inset 0 0 15px rgba(0, 255, 255, 0.12);
+}
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+#userTable thead {
+  background: rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+#userTable th {
+  padding: 14px;
+  color: var(--neon);
+  text-shadow: var(--glow-soft);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================
+   TABLE CELLS
+========================================= */
+#userTable td {
+  padding: 14px;
+  color: var(--white);
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.15);
+  transition: 0.25s ease;
+}
+
+/* =========================================
+   ROW HOVER EFFECT (Premium Smooth)
+========================================= */
+#userTable tbody tr {
+  transition: 0.25s ease-in-out;
+}
+
+#userTable tbody tr:hover {
+  background: rgba(0, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  transform: scale(1.01);
+  box-shadow: var(--glow-soft);
+}
+
+/* =========================================
+   BACK BUTTON – Premium Neon Button
+========================================= */
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 26px;
+
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--neon);
+
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  transition: 0.35s ease;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2),
+    inset 0 0 8px rgba(0, 255, 255, 0.15);
+}
+
+.back-btn:hover {
+  background: var(--neon);
+  color: #000;
+
+  transform: translateX(-5px) scale(1.05);
+  box-shadow: var(--glow-strong), inset 0 0 15px rgba(0, 0, 0, 0.3);
+}

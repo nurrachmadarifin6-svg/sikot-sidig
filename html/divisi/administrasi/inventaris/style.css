@@ -1,0 +1,172 @@
+/* =========================================
+   COLOR THEME
+========================================= */
+:root {
+  --primary-color: #05f2d4;
+  --glass-bg: rgba(0, 0, 0, 0.35);
+  --glass-border: rgba(0, 255, 255, 0.35);
+  --neon: #00fff2;
+  --white: #ffffff;
+}
+
+/* =========================================
+   GLOBAL
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: var(--white);
+  padding: 20px;
+}
+
+/* =========================================
+   TITLE SECTION (Notulensi / Inventaris)
+========================================= */
+.notulensi {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  padding: 25px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+}
+
+.notulensi h3 {
+  font-size: 1.8rem;
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon);
+  margin-bottom: 10px;
+}
+
+.notulensi p {
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+/* Tempat data inventaris yang muncul otomatis */
+.notulensi-section {
+  margin-top: 15px;
+  padding: 15px;
+}
+
+/* =========================================
+   INVENTARIS TABLE BOX
+========================================= */
+.box {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  margin-bottom: 40px;
+}
+
+.box h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon);
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  background: var(--neon);
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 0 20px var(--neon), 0 0 40px var(--neon);
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   INVENTARIS TABLE
+========================================= */
+#inventarisTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#inventarisTable th,
+#inventarisTable td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#inventarisTable th {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+#inventarisTable tbody tr:hover {
+  background: rgba(0, 255, 255, 0.1);
+  transition: 0.2s ease;
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+.back-btn {
+  display: inline-block;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 12px 20px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  color: var(--white);
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 15px var(--neon);
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 540px) {
+  .box,
+  .notulensi {
+    padding: 18px;
+  }
+
+  #inventarisTable th,
+  #inventarisTable td {
+    padding: 10px;
+  }
+
+  button {
+    padding: 12px;
+  }
+}

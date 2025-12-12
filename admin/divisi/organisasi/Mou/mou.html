@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload & Arsip MoU</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h2 class="title">Upload File MoU</h2>
+
+    <div class="upload-box">
+      <input type="file" id="mouInput" />
+      <button onclick="uploadMoU()">Upload</button>
+    </div>
+
+    <h2 class="title">Daftar Kerja Sama dengan Lembaga Lain/MoU</h2>
+
+    <!-- FIX: id ditutup dengan benar -->
+    <div id="mouContainer" class="grid"></div>
+
+    <a class="back-btn" href="/admin/divisi/organisasi/organisasi.html">
+      ← Kembali
+    </a>
+
+    <script src="/admin/divisi/organisasi/Mou/script.js"></script>
+  </body>
+</html>

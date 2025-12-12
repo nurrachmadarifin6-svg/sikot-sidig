@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Buku Inventaris</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="notulensi" class="notulensi">
+      <h3>Admin Data Inventaris</h3>
+      <p>Isi Form untuk menambahkan Data Inventaris.</p>
+      <div class="notulensi-section" id="notulensiList"></div>
+    </div>
+    <section id="inventaris" class="inventaris-section">
+      <h2>Data Inventaris</h2>
+
+      <form
+        id="inventarisForm"
+        class="inventaris-form"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbzRsiAdKoAYvr_oKpgoA_sFK-mLSi7IwsCmBPNvekC-21ks-bZI9rArA-Hpd2bMoWUQ/exec"
+      >
+        <label>Nama Barang</label>
+        <input
+          name="nama"
+          type="text"
+          required
+          placeholder="Masukkan nama barang"
+        />
+
+        <label>Jumlah</label>
+        <input
+          name="jumlah"
+          type="text"
+          required
+          placeholder="Masukkan Jumlah"
+        />
+
+        <button type="submit">Kirim</button>
+
+        <p id="inventaris-status"></p>
+      </form>
+    </section>
+    <a class="back-btn" href="/admin/divisi/administrasi/administrasi.html"
+      >← Kembali</a
+    >
+    <script src="/admin/divisi/administrasi/inventaris/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,207 @@
+/* ============================
+   SUPER PREMIUM – ADMINISTRASI UI
+   Dark Neon + Glassmorphism
+===============================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --bg-dark: #0a0f1a;
+  --glass: rgba(255, 255, 255, 0.05);
+  --neon: #00ffcc;
+  --text: #e8f7f2;
+  --highlight: #00d1a0;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* =============== BACKGROUND PARTICLE =============== */
+body::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle at center, rgba(0,255,200,0.12), transparent 70%);
+  filter: blur(140px);
+  z-index: -1;
+}
+
+/* Floating particle lights */
+body::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: -80px;
+  bottom: -80px;
+  background: radial-gradient(circle, rgba(0,255,204,0.2), transparent 70%);
+  filter: blur(90px);
+  z-index: -1;
+}
+
+/* =============== HEADER DIVISI =============== */
+.divisi-header {
+  text-align: center;
+  padding: 60px 20px;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, rgba(0,255,200,0.08), rgba(0,255,200,0.01));
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 40px rgba(0,255,200,0.1);
+}
+
+.divisi-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--neon);
+  text-shadow: 0 0 15px rgba(0,255,200,0.5);
+}
+
+.divisi-header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* =============== SECTION ADMINISTRASI =============== */
+.divisi-section {
+  margin-bottom: 40px;
+}
+
+.divisi-section h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  padding: 15px;
+  color: var(--neon);
+  border-bottom: 2px solid var(--neon);
+  width: max-content;
+  margin: 0 auto 25px auto;
+  text-shadow: 0 0 12px rgba(0,255,200,0.6);
+}
+
+/* =============== ARSIP LIST =============== */
+.arsip-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.arsip-item {
+  display: block;
+  padding: 22px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+  backdrop-filter: blur(25px);
+  box-shadow: 0 0 20px rgba(0,255,200,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow line efek premium */
+.arsip-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(0,255,200,0.4), transparent);
+  transition: 0.5s;
+}
+
+.arsip-item:hover::before {
+  left: 100%;
+}
+
+.arsip-item:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: var(--neon);
+  box-shadow: 0 0 30px rgba(0,255,200,0.3);
+}
+
+/* =============== ARSIP TABLE =============== */
+.arsip-section {
+  margin-top: 40px;
+  padding: 25px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 25px rgba(0,255,200,0.08);
+}
+
+.arsip-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--neon);
+  text-shadow: 0 0 12px rgba(0,255,200,0.5);
+}
+
+.arsip-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.arsip-table thead {
+  background: rgba(0,255,200,0.12);
+}
+
+.arsip-table th,
+.arsip-table td {
+  padding: 15px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.arsip-table tbody tr:hover {
+  background: rgba(0,255,200,0.07);
+  cursor: pointer;
+}
+
+/* =============== BACK BUTTON =============== */
+.back-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 22px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--text);
+  text-decoration: none;
+  transition: 0.3s;
+  backdrop-filter: blur(20px);
+}
+
+.back-btn:hover {
+  border-color: var(--neon);
+  box-shadow: 0 0 20px rgba(0,255,200,0.4);
+  transform: translateX(-4px);
+}

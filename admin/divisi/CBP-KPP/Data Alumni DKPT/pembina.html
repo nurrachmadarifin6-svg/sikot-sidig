@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Alumni DKPT</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="notulensi" class="notulensi">
+      <h3>Data Alumni DKPT</h3>
+
+      <!-- Form Tambah / Edit -->
+      <section class="box">
+        <h4 id="formTitle">Tambah Alumni</h4>
+        <form id="alumniForm">
+          <input type="hidden" id="indexEdit" value="">
+          <input type="text" id="nama" placeholder="Nama" required />
+          <input type="text" id="alamat" placeholder="Alamat" required />
+          <input type="text" id="wa" placeholder="Nomor WA" required />
+          <button type="submit">Simpan</button>
+          <button type="button" id="cancelEdit" style="display:none;">Batal</button>
+        </form>
+      </section>
+
+      <!-- Tabel Data -->
+      <section class="box">
+        <button onclick="loadAlumni()">Reload Data</button>
+        <table id="alumniAdminTable">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Alamat</th>
+              <th>WA</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <a class="back-btn" href="/admin/divisi/CBP-KPP/cbp-kpp.html">← Kembali</a>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

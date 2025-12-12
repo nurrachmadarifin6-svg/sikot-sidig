@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buku Kegiatan</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="notulensi" class="notulensi">
+      <h3>Buku Agenda Kegiatan</h3>
+      <p>Isi Data Agenda Kegiatan.</p>
+      <div class="notulensi-section" id="notulensiList"></div>
+    </div>
+    <section id="agendaForm" class="box">
+      <h1>Data Agenda</h1>
+
+      <button onclick="loadAgenda()">Reload Data</button>
+
+      <table id="agendaTable">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Sasaran</th>
+            <th>Target</th>
+            <th>Keterangan</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <a class="back-btn" href="/html/divisi/administrasi/administrasi.html">← Kembali</a>
+    <script src="/html/divisi/administrasi/agenda/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Data PR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h2>Admin Data PR</h2>
+
+  <!-- ===========================
+        TABLE DATA
+  ============================ -->
+  <table border="1" id="dataTable">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nama Ranting</th>
+        <th>IPNU/IPPNU</th>
+        <th>Nomor SP</th>
+        <th>Masa Berlaku</th>
+        <th>Nama Ketua</th>
+        <th>Nama Sekretaris</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- ===========================
+        FORM TAMBAH DATA
+  ============================ -->
+  <h3>Tambah Data</h3>
+
+  <form id="addForm">
+    <input name="ranting" placeholder="Nama Ranting" required>
+    <input name="ip" placeholder="IPNU / IPPNU" required>
+    <input name="nomor" placeholder="Nomor SP" required>
+    <input type="date" name="masa" placeholder="Masa Berlaku" required>
+    <input name="ketua" placeholder="Nama Ketua" required>
+    <input name="sekretaris" placeholder="Nama Sekretaris" required>
+
+    <button type="submit">Tambah</button>
+  </form>
+
+  <a class="back-btn" href="/admin/divisi/organisasi/organisasi.html">← Kembali</a>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

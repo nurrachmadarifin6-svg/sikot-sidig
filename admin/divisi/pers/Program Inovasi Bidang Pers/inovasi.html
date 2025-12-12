@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Program Inovasi Bidang Administrasi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="notulensi" class="notulensi">
+      <h3>Admin Program Inovasi Bidang Administrasi</h3>
+      <p>Isi Form untuk Data Program Inovasi .</p>
+      <div class="notulensi-section" id="notulensiList"></div>
+    </div>
+    <section id="inovasi" class="inovasi-section">
+      <h2>Data Inovasi</h2>
+
+      <form
+        id="inovasiForm"
+        class="inovasi-form"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbxOtxlmBxgPQ1qyKxSTYGB7otj_F2bz-ADqTos73NavvdeWn7Zjjdg1uMt_m5_WrDg/exec"
+      >
+        <label>Nama</label>
+        <input
+          name="nama"
+          type="text"
+          required
+          placeholder="Masukkan nama barang"
+        />
+
+        <label>Sasaran</label>
+        <input
+          name="sasaran"
+          type="text"
+          required
+          placeholder="Masukkan Sasaran"
+        />
+
+        <label>Target</label>
+        <input
+          name="target"
+          type="text"
+          required
+          placeholder="Masukkan Target"
+        />
+
+        <label>Keterangan</label>
+        <input
+          name="keterangan"
+          type="text"
+          required
+          placeholder="Masukkan Keterangan"
+        />
+
+        <button type="submit">Kirim</button>
+
+        <p id="inovasi-status"></p>
+      </form>
+    </section>
+    <a class="back-btn" href="/admin/divisi/administrasi/administrasi.html"
+      >← Kembali</a
+    >
+    <script src="/admin/divisi/administrasi/Inovasi/script.js"></script>
+  </body>
+</html>

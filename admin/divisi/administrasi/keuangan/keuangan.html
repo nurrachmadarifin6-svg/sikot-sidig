@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload & Arsip Keuangan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 class="title">Upload File Kartu Tanda Anggota</h2>
+
+    <div class="upload-box">
+      <input type="file" id="keuanganInput" />
+      <button onclick="uploadKeuangan()">Upload</button>
+    </div>
+
+    <h2 class="title">Daftar Keuangan</h2>
+
+    <div id="keuanganContainer" class="grid"></div>
+
+    <a class="back-btn" href="/admin/divisi/administrasi/administrasi.html"
+      >← Kembali</a
+    >
+
+    <script src="/admin/divisi/administrasi/keuangan/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1307 @@
+:root {
+  --primary-color: #05f2d4;
+  --glass-bg: rgba(0, 0, 0, 0.35);
+  --glass-border: rgba(0, 255, 255, 0.35);
+  --neon: #00fff2;
+  --white: #ffffff;
+  --neon-shadow: #00fff2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  background: #000 !important; /* Full black */
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+}
+/* ==== NEO GLASS VARIABLES ==== */
+
+/* ==== NAVBAR GLASSMORPHIC ==== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 7%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+
+  /* GLASS EFFECT */
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+
+  /* NEON BORDER */
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2),
+    inset 0 0 20px rgba(0, 255, 255, 0.2);
+
+  animation: navbarFloat 6s ease-in-out infinite alternate;
+}
+
+/* FLOATING EFFECT */
+@keyframes navbarFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(4px);
+  }
+}
+
+/* ==== LOGO ==== */
+.navbar .navbar-logo {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--neon);
+  text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2;
+  transition: 0.3s ease;
+}
+
+.navbar .navbar-logo:hover {
+  transform: scale(1.06);
+  text-shadow: 0 0 12px #00fff2, 0 0 26px #00fff2;
+}
+
+.navbar .navbar-logo span {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 4px #00fff2;
+}
+
+/* ==== NAV LINKS ==== */
+.navbar .navbar-nav a {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 1.5rem;
+  position: relative;
+
+  transition: 0.3s ease;
+}
+
+/* HOVER SCALE + NEON */
+.navbar .navbar-nav a:hover {
+  color: var(--neon);
+  transform: scale(1.08);
+  text-shadow: 0 0 10px var(--neon);
+}
+
+/* NEON UNDERLINE ANIMATION */
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.13rem solid var(--neon);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ==== ICONS ==== */
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+  transition: 0.25s ease;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--neon);
+  transform: scale(1.2);
+  text-shadow: 0 0 10px var(--neon);
+}
+
+/* ==== NEON PARTICLE GLOW AROUND NAVBAR ==== */
+.navbar::before,
+.navbar::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.35), transparent 70%);
+  border-radius: 50%;
+  animation: particleFloat 8s infinite ease-in-out alternate;
+  pointer-events: none;
+}
+
+/* Particle Left */
+.navbar::before {
+  top: -20px;
+  left: 15%;
+}
+
+/* Particle Right */
+.navbar::after {
+  top: -25px;
+  right: 18%;
+  animation-delay: 2.5s;
+}
+
+/* Particle float animation */
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(15px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+#hamburger-menu {
+  display: none;
+}
+/* ============================
+     HERO NEO GLASS + NEON
+============================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  background-image: url("fotokkk.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  animation: heroFloat 12s ease-in-out infinite alternate;
+}
+
+/* Floating subtle motion */
+@keyframes heroFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(6px);
+  }
+}
+
+/* DARK FADE Overlay */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0.2) 40%,
+    rgba(0, 0, 0, 0.4)
+  );
+  z-index: 1;
+}
+
+/* Upper dark fade */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 6%,
+    rgba(0, 0, 0, 0.1) 30%
+  );
+  z-index: 1;
+}
+
+/* ============================
+       HERO CONTENT AREA
+============================ */
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+  position: relative;
+  z-index: 3;
+
+  backdrop-filter: blur(12px) saturate(150%);
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  /* subtle neon border */
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.1),
+    inset 0 0 14px rgba(0, 255, 255, 0.2);
+
+  animation: glowPulse 8s in;
+}
+/* ===============================
+   BERITA – HALAMAN UMUM
+================================ */
+.berita-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.berita-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.berita-card:hover {
+  transform: translateY(-5px);
+}
+
+.berita-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.berita-card-content {
+  padding: 15px 20px;
+}
+
+.berita-card h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #222;
+}
+
+.berita-card p {
+  color: #555;
+}
+
+.detail-berita {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.detail-berita img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.detail-berita h1 {
+  margin-bottom: 10px;
+}
+
+/* ABOUT SECTION */
+.about {
+  padding: 8rem 7%;
+  text-align: center;
+  font-size: 3rem;
+  background: #000; /* full black */
+  color: var(--white);
+}
+
+/* Title */
+.about h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--white);
+  text-shadow: 0 0 15px var(--neon), 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+/* Image Wrapper */
+.about .about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image inside */
+.about .about-img img {
+  width: 100%;
+  max-width: 80rem;
+  border-radius: 12px;
+
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.25), 0 0 40px rgba(0, 255, 255, 0.15),
+    0 0 60px rgba(0, 255, 255, 0.1);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover 3D tilt */
+.about .about-img img:hover {
+  transform: perspective(1000px) rotateX(4deg) rotateY(-4deg) scale(1.03);
+  box-shadow: 0 0 25px var(--neon), 0 0 50px rgba(0, 255, 255, 0.5);
+}
+
+/* Content Paragraph */
+.about .about-content p {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  max-width: 65rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.75);
+
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
+}
+
+/* UL style */
+.about .about-content ul {
+  margin-top: 2rem;
+  padding-left: 2rem;
+  display: inline-block;
+  text-align: left;
+}
+
+/* List */
+.about .about-content ul li {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.75);
+
+  padding: 10px 15px;
+  border-left: 2px solid var(--neon);
+
+  transition: 0.3s ease;
+}
+
+/* Hover glow */
+.about .about-content ul li:hover {
+  color: var(--white);
+  border-left: 2px solid var(--primary-color);
+
+  text-shadow: 0 0 10px var(--neon);
+  transform: translateX(8px);
+}
+
+/* ============================
+      DROPDOWN CONTAINER
+============================ */
+.navbar .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Button */
+.navbar .dropdown-btn {
+  cursor: pointer;
+  padding: 10px 15px;
+  display: inline-block;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
+}
+
+/* Glow Hover */
+.navbar .dropdown-btn:hover {
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon);
+  transform: scale(1.05);
+}
+
+/* ============================
+      DROPDOWN CONTENT
+============================ */
+.navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+
+  min-width: 180px;
+  border-radius: 14px;
+  padding: 8px 0;
+
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.25),
+    inset 0 0 15px rgba(0, 255, 255, 0.15);
+
+  z-index: 99999;
+
+  opacity: 0;
+  transform: translateY(10px) scale(0.95);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* SHOW dropdown on hover */
+.navbar .dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px) scale(1);
+}
+
+/* ============================
+       DROPDOWN LINKS
+============================ */
+.navbar .dropdown-content a {
+  color: #e8ffff;
+  padding: 12px 18px;
+  display: block;
+  text-decoration: none;
+  font-size: 1.1rem;
+
+  transition: 0.25s ease;
+  position: relative;
+}
+
+/* Glow Hover Effect */
+.navbar .dropdown-content a:hover {
+  color: var(--neon);
+  background: rgba(0, 255, 255, 0.08);
+  text-shadow: 0 0 10px var(--neon);
+  transform: scale(1.03);
+}
+
+/* Neon underline on hover */
+.navbar .dropdown-content a::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  bottom: 8px;
+  width: 0%;
+  height: 2px;
+  background: var(--neon);
+  box-shadow: 0 0 8px var(--neon);
+  transition: width 0.25s ease;
+}
+
+.navbar .dropdown-content a:hover::after {
+  width: 40%;
+}
+
+/* ============================
+     NEON PARTICLE AROUND
+============================ */
+.navbar .dropdown-content::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  right: 25%;
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.35), transparent 70%);
+  border-radius: 50%;
+  filter: blur(10px);
+  animation: dropdownParticle 6s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes dropdownParticle {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(10px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* -----------------------
+   DASHBOARD DIVISI
+------------------------*/
+
+/* =============================
+   PREMIUM DASHBOARD STYLE
+============================= */
+
+.dashboard-section {
+  padding: 70px 20px;
+  background: linear-gradient(180deg, #000000, #022f26, #000000);
+  text-align: center;
+}
+
+.dashboard-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  color: #f5f5f5;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* GRID */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  animation: fadeIn 0.8s ease;
+}
+
+/* CARD PREMIUM */
+.dash-card {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 35px 25px;
+
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  color: #dfffe9;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: 0.35s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  transform: translateY(0);
+}
+
+/* Hover Premium */
+.dash-card:hover {
+  background: rgba(10, 92, 54, 0.85);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+/* Smooth Light Pulse (Premium) */
+.dash-card:hover {
+  animation: glow 1.4s infinite alternate ease-in-out;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 10px 25px rgba(0, 255, 200, 0.2);
+  }
+  to {
+    box-shadow: 0 18px 35px rgba(0, 255, 200, 0.35);
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =============================
+   PREMIUM DIVISI HEADER
+============================= */
+
+.divisi-header {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(180deg, #05573e, #033a28);
+  color: white;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.divisi-header h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.arsip-section {
+  padding: 40px 20px;
+}
+
+.arsip-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.arsip-table th,
+.arsip-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.arsip-table th {
+  background: #0a5c36;
+  color: white;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #0a5c36;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.back-btn:hover {
+  background: #084a2b;
+}
+
+/* ===== GLOBAL ===== */
+/* ============================
+   GLOBAL & TEXT STYLE
+=============================== */
+/* ============================
+   GLOBAL BACKGROUND
+=============================== */
+
+/* TITLE */
+.title {
+  text-align: center;
+  color: var(--neon);
+  font-size: 1.8rem;
+  margin: 25px 0 18px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 10px var(--neon-shadow);
+  animation: fadeIn 0.7s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   GRID WRAPPER
+========================================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 22px;
+  padding: 10px 0;
+}
+
+/* =========================================
+   CARD STYLE (Universal)
+========================================= */
+.grid .card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+  backdrop-filter: blur(18px) saturate(180%);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.18),
+    inset 0 0 12px rgba(255, 255, 255, 0.05);
+  transition: 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow line atas */
+.grid .card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--neon), transparent);
+  opacity: 0.4;
+  transition: 0.35s;
+}
+
+.grid .card:hover::before {
+  opacity: 1;
+}
+
+/* Hover effect */
+.grid .card:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: var(--neon);
+  box-shadow: 0 0 30px var(--neon);
+}
+
+/* =========================================
+   CARD IMAGE
+========================================= */
+.grid .card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--glass-border);
+  margin-bottom: 12px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 14px rgba(0, 255, 255, 0.2);
+}
+
+.grid .card img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================================
+   TITLE INSIDE CARD
+========================================= */
+.grid .card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: var(--neon);
+  text-shadow: 0 0 8px var(--neon);
+  line-height: 1.3;
+}
+
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
+.grid .card a {
+  display: inline-block;
+  width: 100%;
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #ff3b3b, #ff0000);
+  box-shadow: 0 0 12px rgba(255, 50, 50, 0.5);
+}
+
+.grid .card a:hover {
+  background: linear-gradient(135deg, #ff6464, #ff1a1a);
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(255, 70, 70, 0.9);
+}
+
+/* =========================================
+   BACK BUTTON (opsional)
+========================================= */
+.back-btn {
+  display: inline-block;
+  margin: 35px 0 30px 20px;
+  padding: 12px 25px;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--primary-color), var(--neon));
+  color: #000;
+  font-size: 1.05rem;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: 0.3s;
+  box-shadow: 0 0 15px var(--neon-shadow);
+}
+
+.back-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px var(--neon-shadow);
+}
+
+/* ============================
+   SECTION ALUMNI — DARK NEO GLASS
+   ============================ */
+/* ============================
+   ALUMNI SECTION
+   ============================ */
+.alumni-section {
+  padding: 40px 20px;
+  background: #000;
+  color: var(--white);
+}
+
+.alumni-section h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--white);
+  text-shadow: 0 0 15px var(--neon);
+}
+
+/* Form wrapper */
+.alumni-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 16px;
+
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15), 0 0 40px rgba(0, 255, 255, 0.1),
+    inset 0 0 20px rgba(0, 255, 255, 0.05);
+
+  transition: 0.3s ease;
+}
+
+.alumni-form:hover {
+  box-shadow: 0 0 25px var(--neon), 0 0 50px rgba(0, 255, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Input style */
+.alumni-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 15px;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--white);
+  font-size: 1.4rem;
+  transition: 0.3s ease;
+}
+
+.alumni-form input:focus {
+  border-color: var(--neon);
+  box-shadow: 0 0 10px var(--neon);
+  outline: none;
+}
+
+/* Submit button */
+.alumni-form button {
+  width: 100%;
+  padding: 14px;
+  background: var(--neon);
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.alumni-form button:hover {
+  background: var(--primary-color);
+  box-shadow: 0 0 20px var(--neon);
+}
+
+/* Status */
+#alumni-status {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--neon);
+}
+
+/* ============================
+   MAP SECTION
+   ============================ */
+
+.section {
+  padding: 10rem;
+  background: #000;
+  color: var(--white);
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--white);
+  text-shadow: 0 0 15px var(--neon);
+}
+
+.section p.muted {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Map iframe */
+.map-embed iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 14px;
+  border: 1px solid var(--glass-border);
+
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3), 0 0 50px rgba(0, 255, 255, 0.15),
+    inset 0 0 20px rgba(0, 255, 255, 0.05);
+
+  transition: 0.3s ease;
+}
+
+.map-embed iframe:hover {
+  box-shadow: 0 0 30px var(--neon), 0 0 80px rgba(0, 255, 255, 0.25);
+}
+
+/* ============================
+   CONTACT SECTION
+   ============================ */
+.contact {
+  padding: 5rem 7%;
+  background: #000;
+  color: var(--white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.contact-grid h3 {
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-shadow: 0 0 12px var(--neon);
+}
+
+.contact-grid form {
+  padding: 20px;
+  border-radius: 14px;
+
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15),
+    inset 0 0 20px rgba(0, 255, 255, 0.07);
+}
+
+/* Labels */
+.contact-grid label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* Input / textarea */
+.contact-grid input,
+.contact-grid textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  font-size: 15px;
+  color: var(--white);
+
+  transition: 0.3s ease;
+}
+
+.contact-grid input:focus,
+.contact-grid textarea:focus {
+  border-color: var(--neon);
+  box-shadow: 0 0 12px var(--neon);
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  background: var(--neon);
+  color: #000;
+  padding: 0.9rem 2rem; /* lebih proporsional */
+  font-size: 1.3rem; /* tidak terlalu kecil */
+  border-radius: 12px; /* lebih modern */
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: 0.25s ease;
+  box-shadow: 0 0 12px var(--neon);
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 20px var(--neon), 0 0 40px var(--neon);
+}
+
+/* Contact Info */
+.contact-info {
+  padding: 2rem;
+  height: auto;
+
+  background: var(--glass-bg);
+  border-radius: 14px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15),
+    inset 0 0 20px rgba(0, 255, 255, 0.05);
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  color: var(--white);
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--glass-bg);
+  border-top: 1px solid var(--glass-border);
+  color: var(--white);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2),
+    inset 0 0 10px rgba(0, 255, 255, 0.05);
+}
+
+.footer p {
+  font-size: 1.2rem;
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* =============================
+     MOBILE MENU (HAMBURGER)
+============================= */
+
+#hamburger-menu {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--neon);
+  font-size: 2rem;
+  transition: 0.3s ease;
+}
+
+#hamburger-menu:hover {
+  transform: scale(1.15);
+  text-shadow: 0 0 10px var(--neon), 0 0 20px var(--neon);
+}
+
+/* =============================
+     NAVBAR NAV (MOBILE DRAWER)
+============================= */
+
+.navbar .navbar-nav {
+  position: absolute;
+  top: 100%;
+  right: -120%;
+  width: 22rem;
+  height: 90vh;
+
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+
+  border-left: 1px solid rgba(0, 255, 255, 0.25);
+  box-shadow: -8px 0 25px rgba(0, 255, 255, 0.25),
+    inset -5px 0 15px rgba(0, 255, 255, 0.15);
+
+  padding-top: 2rem;
+  transition: right 0.4s ease;
+  z-index: 9999;
+}
+
+/* ACTIVE = Drawer terbuka */
+.navbar .navbar-nav.active {
+  right: 0;
+}
+
+/* =============================
+          NAV LINKS
+============================= */
+
+.navbar .navbar-nav a {
+  display: block;
+  color: #e9ffff;
+  padding: 1.2rem 2rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* Neon underline hover */
+.navbar .navbar-nav a::after {
+  content: "";
+  position: absolute;
+  left: 2rem;
+  bottom: 0.8rem;
+  width: 0%;
+  height: 2px;
+  background: var(--neon);
+  transition: width 0.4s ease;
+  box-shadow: 0 0 6px var(--neon);
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--neon);
+  text-shadow: 0 0 8px var(--neon);
+}
+
+.navbar .navbar-nav a:hover::after {
+  width: 30%;
+}
+
+/* =============================
+      DROPDOWN (MOBILE)
+============================= */
+
+.navbar .dropdown {
+  position: relative;
+  width: 100%;
+}
+
+/* Dropdown Button */
+.navbar .dropdown-btn {
+  width: 100%;
+  padding: 1.2rem 2rem;
+  color: #e9ffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.3s;
+}
+
+.navbar .dropdown-btn:hover {
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon);
+}
+
+/* Dropdown Content */
+.navbar .dropdown-content {
+  display: none;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  border-left: 2px solid rgba(0, 255, 255, 0.25);
+  margin-left: 2rem;
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+
+  box-shadow: inset 0 0 15px rgba(0, 255, 255, 0.15);
+  animation: dropdownFade 0.4s ease both;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown Links */
+.navbar .dropdown-content a {
+  padding: 1rem 2rem;
+  color: #e9ffff;
+  font-size: 1.3rem;
+  transition: 0.3s ease;
+  display: block;
+}
+
+.navbar .dropdown-content a:hover {
+  background: rgba(0, 255, 255, 0.08);
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon);
+}
+
+/* =============================
+     PARTICLE GLOW INSIDE MENU
+============================= */
+
+.navbar .navbar-nav::before {
+  content: "";
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.25), transparent 70%);
+  border-radius: 50%;
+  filter: blur(25px);
+  animation: floatGlow 6s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes floatGlow {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(20px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* =============================
+            RESPONSIVE
+============================= */
+
+@media (max-width: 480px) {
+  html {
+    font-size: 55%;
+  }
+}
+

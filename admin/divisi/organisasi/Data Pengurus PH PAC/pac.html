@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Data PH PAC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h2>Admin Data PH PAC</h2>
+
+  <table border="1" id="dataTable">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Timestamp</th>
+        <th>Nama</th>
+        <th>Alamat</th>
+        <th>Jabatan</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h3>Tambah Data</h3>
+  <form id="addForm">
+    <input name="nama" placeholder="Nama" required>
+    <input name="alamat" placeholder="Alamat" required>
+    <input name="jabatan" placeholder="Jabatan" required>
+
+    <button>Tambah</button>
+  </form>
+
+  <a class="back-btn" href="/admin/divisi/organisasi/organisasi.html">← Kembali</a>
+
+  <script src="script.js"></script>
+</body>
+</html>

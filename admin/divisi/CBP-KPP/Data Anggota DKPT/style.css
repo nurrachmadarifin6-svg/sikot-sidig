@@ -1,0 +1,235 @@
+/* =========================================
+   ROOT COLOR
+========================================= */
+:root {
+  --primary: #05f2d4;
+  --neon: #00fff2;
+  --glass-bg: rgba(0, 0, 0, 0.35);
+  --glass-border: rgba(0, 255, 255, 0.3);
+  --white: #fff;
+  --black: #000;
+}
+
+/* =========================================
+   GLOBAL STYLE
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: var(--white);
+  padding: 20px;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+h2,
+h3 {
+  color: var(--neon);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* =========================================
+   TABLE CONTAINER
+========================================= */
+#dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background: var(--glass-bg);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+}
+
+#dataTable thead {
+  background: rgba(0, 255, 255, 0.15);
+}
+
+#dataTable th,
+#dataTable td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--white);
+}
+
+#dataTable tbody tr:hover {
+  background: rgba(0, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+#dataTable th {
+  color: var(--neon);
+  font-weight: 700;
+}
+
+/* =========================================
+   FORM BOX (Tambah Data)
+========================================= */
+form {
+  width: 100%;
+  padding: 20px;
+  background: var(--glass-bg);
+  border-radius: 18px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+form input:focus {
+  border-color: var(--neon);
+  box-shadow: 0 0 10px var(--neon);
+  outline: none;
+}
+/* =========================================
+   DROPDOWN (SELECT)
+========================================= */
+
+form select,
+.table-edit-select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  font-size: 0.95rem;
+  appearance: none; /* hilangkan default tampilan */
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form select:focus,
+.table-edit-select:focus {
+  border-color: var(--neon);
+  box-shadow: 0 0 10px var(--neon);
+  outline: none;
+}
+
+/* Panah dropdown custom */
+form select::-ms-expand,
+.table-edit-select::-ms-expand {
+  display: none;
+}
+
+form select,
+.table-edit-select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%2300fff2' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+button {
+  padding: 14px;
+  background: var(--neon);
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--neon);
+}
+
+/* =========================================
+   ACTION BUTTONS INSIDE TABLE
+========================================= */
+.table-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.edit-btn {
+  background: var(--primary);
+  color: #000;
+}
+
+.edit-btn:hover {
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.delete-btn {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  box-shadow: 0 0 10px #ff4d4d;
+}
+/* =========================================
+   EDIT MODE INPUT (Inside Table)
+========================================= */
+
+.table-edit-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.table-edit-input::placeholder {
+  color: var(--primary);
+  opacity: 0.7;
+}
+
+.table-edit-input:focus {
+  border-color: var(--neon);
+  box-shadow: 0 0 10px var(--neon);
+  outline: none;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 20px;
+  background: var(--glass-bg);
+  color: var(--neon);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: var(--neon);
+  color: #000;
+  transform: translateX(-5px);
+  box-shadow: 0 0 15px var(--neon);
+}

@@ -1,0 +1,165 @@
+/* =========================================
+   SUPER PREMIUM ROOT COLOR
+========================================= */
+:root {
+  --primary: #05f2d4;
+  --neon: #00fff2;
+  --neon-strong: #35ffff;
+  --glass-bg: rgba(0, 0, 0, 0.45);
+  --glass-border: rgba(0, 255, 255, 0.35);
+  --white: #fff;
+  --black: #000;
+  --shadow-neon: 0 0 8px #00fff2, 0 0 16px #00fff2, 0 0 30px #00e0ff;
+}
+
+/* =========================================
+   GLOBAL PREMIUM STYLE
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #001519 0%, #000 60%);
+  color: var(--white);
+  padding: 30px;
+  overflow-x: hidden;
+  animation: fadeIn 1s ease;
+}
+
+/* Floating glowing particles */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("https://i.imgur.com/zY9Z9Zy.png");
+  opacity: 0.18;
+  pointer-events: none;
+  animation: particleMove 20s linear infinite;
+}
+
+/* =========================================
+   PAGE TITLE SUPER PREMIUM
+========================================= */
+h2 {
+  color: var(--neon);
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 38px;
+  font-weight: 700;
+  text-shadow: var(--shadow-neon);
+  letter-spacing: 1px;
+  animation: glowPulse 2.5s infinite ease-in-out;
+}
+
+p {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* =========================================
+   TABLE SUPER PREMIUM
+========================================= */
+#userTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background: var(--glass-bg);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.18);
+  animation: tableFadeIn 1.1s ease;
+}
+
+#userTable thead {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 255, 255, 0.15),
+    rgba(0, 180, 255, 0.20)
+  );
+}
+
+#userTable th, 
+#userTable td {
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--white);
+  font-size: 16px;
+}
+
+#userTable th {
+  color: var(--neon);
+  font-weight: 800;
+  text-shadow: var(--shadow-neon);
+  letter-spacing: 0.6px;
+}
+
+#userTable tbody tr {
+  transition: 0.25s ease;
+}
+
+#userTable tbody tr:hover {
+  background: rgba(0, 255, 255, 0.08);
+  transform: scale(1.01);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.18);
+}
+
+/* =========================================
+   BACK BUTTON SUPER PREMIUM
+========================================= */
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 24px;
+  background: var(--glass-bg);
+  color: var(--neon);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  text-decoration: none;
+  transition: 0.4s ease;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-shadow: 0 0 6px var(--neon);
+}
+
+.back-btn:hover {
+  background: var(--neon);
+  color: #000;
+  transform: translateX(-8px) scale(1.05);
+  box-shadow: 0 0 18px var(--neon-strong);
+}
+
+/* =========================================
+   ANIMATIONS SUPER PREMIUM
+========================================= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes glowPulse {
+  0%   { text-shadow: 0 0 10px var(--neon); }
+  50%  { text-shadow: 0 0 25px var(--neon-strong); }
+  100% { text-shadow: 0 0 10px var(--neon); }
+}
+
+@keyframes tableFadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes particleMove {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-300px); }
+}

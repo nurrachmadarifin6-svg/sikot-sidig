@@ -1,0 +1,212 @@
+/* ============================================
+   SUPER PREMIUM FUTURISTIC NEO-GLASS STYLE
+   Dengan efek:
+   - Particle background
+   - Animated neon border
+   - 3D hover tilt
+   - Glow aura
+   - Soft gradient lighting
+============================================ */
+
+/* GLOBAL */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+
+  background: #020403;
+
+  /* Particle animated background */
+  background-image: radial-gradient(circle, rgba(0,255,200,0.2) 1px, transparent 1px),
+                    radial-gradient(circle, rgba(0,255,200,0.15) 1px, transparent 1px);
+  background-size: 50px 50px, 80px 80px;
+  animation: bgMove 20s linear infinite;
+  color: #fff;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 200px 200px, -200px -200px; }
+}
+
+/* CONTAINER */
+.notulensi {
+  max-width: 1000px;
+  margin: 55px auto;
+  padding: 40px;
+  border-radius: 25px;
+
+  /* Super Glass Depth */
+  background: rgba(10, 35, 30, 0.30);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 2px solid rgba(0, 255, 200, 0.25);
+  box-shadow: 0 0 40px rgba(0,255,200,0.18), inset 0 0 20px rgba(0,255,200,0.05);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* MOVING light on top */
+.notulensi::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(0,255,200,0.22),
+    transparent
+  );
+  animation: rotateLight 12s linear infinite;
+}
+
+@keyframes rotateLight {
+  100% { transform: rotate(360deg); }
+}
+
+.notulensi h3 {
+  text-align: center;
+  font-size: 2.3rem;
+  letter-spacing: 2px;
+  color: #00ffe0;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(0,255,230,0.55);
+}
+
+.notulensi p {
+  text-align: center;
+  color: #d4fff7;
+  font-size: 1.05rem;
+  margin-bottom: 35px;
+}
+
+/* GRID */
+.notulensi-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 25px;
+}
+
+/* CARD SUPER PREMIUM */
+.notulensi-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 22px;
+  padding: 18px;
+  border: 1.5px solid rgba(0,255,200,0.25);
+
+  box-shadow: 
+    0 0 25px rgba(0,255,200,0.12),
+    inset 0 0 10px rgba(0,255,200,0.05);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  position: relative;
+  overflow: hidden;
+
+  transform-style: preserve-3d;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+/* 3D Tilt on hover */
+.notulensi-card:hover {
+  transform: translateY(-10px) rotateX(8deg) rotateY(4deg);
+  box-shadow:
+    0 0 45px rgba(0,255,200,0.3),
+    inset 0 0 12px rgba(0,255,200,0.15);
+  border-color: #00ffd5;
+}
+
+/* Animated Neon Border */
+.notulensi-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  padding: 2px;
+  background: linear-gradient(130deg, #00ffc8 0%, #0099ff 50%, #00ffc8 100%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: neonMove 4s linear infinite;
+}
+
+@keyframes neonMove {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+/* TITLE */
+.notulensi-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #00ffe0;
+  text-shadow: 0 0 10px rgba(0,255,200,0.4);
+  position: relative;
+  z-index: 2;
+}
+
+/* IMAGE STYLE */
+.notulensi-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.12);
+  margin-bottom: 15px;
+  transition: 0.35s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.notulensi-card:hover img {
+  transform: scale(1.05);
+}
+
+/* DOWNLOAD BUTTON */
+.notulensi-card button {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00ffe0, #00ff86);
+  color: #000;
+  font-size: 1rem;
+  box-shadow: 0 0 15px rgba(0,255,200,0.45);
+  transition: 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.notulensi-card button:hover {
+  background: linear-gradient(135deg, #00ffb5, #00ff69);
+  box-shadow: 0 0 25px rgba(0,255,200,0.8);
+}
+
+/* BACK BUTTON */
+.back-btn {
+  display: inline-block;
+  margin: 40px 0 40px 20px;
+  padding: 12px 25px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #00ffd7, #00ffa2);
+  color: #000;
+  font-size: 1.05rem;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(0,255,200,0.4);
+}
+
+.back-btn:hover {
+  background: linear-gradient(135deg, #00ffb5, #00ff7a);
+  box-shadow: 0 0 25px rgba(0,255,200,0.8);
+}

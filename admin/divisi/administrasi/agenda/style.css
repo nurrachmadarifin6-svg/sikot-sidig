@@ -1,0 +1,154 @@
+/* =========================================
+   ROOT COLOR
+========================================= */
+:root {
+  --primary: #05f2d4;
+  --neon: #00fff2;
+  --glass-bg: rgba(0, 0, 0, 0.35);
+  --glass-border: rgba(0, 255, 255, 0.3);
+  --white: #fff;
+  --black: #000;
+}
+
+/* =========================================
+   GLOBAL
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: var(--white);
+  padding: 20px;
+}
+
+/* =========================================
+   HEADER BOX
+========================================= */
+.notulensi {
+  width: 100%;
+  margin: 0 auto 30px;
+  padding: 25px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.notulensi h3 {
+  font-size: 1.8rem;
+  color: var(--neon);
+  margin-bottom: 10px;
+}
+
+.notulensi p {
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+/* =========================================
+   FORM SECTION
+========================================= */
+.agenda-section {
+  width: 100%;
+  margin: auto;
+  padding: 25px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 22px;
+  backdrop-filter: blur(10px);
+}
+
+.agenda-section h2 {
+  text-align: center;
+  color: var(--neon);
+  margin-bottom: 20px;
+}
+
+.agenda-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* =========================================
+   LABEL & INPUT
+========================================= */
+.agenda-form label {
+  font-size: 1rem;
+  color: var(--neon);
+}
+
+.agenda-form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+.agenda-form input:focus {
+  border-color: var(--neon);
+  box-shadow: 0 0 10px var(--neon);
+  outline: none;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+button {
+  width: 100%;
+  padding: 14px;
+  background: var(--neon);
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--neon);
+}
+
+/* =========================================
+   STATUS TEXT
+========================================= */
+#agenda-status {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: var(--primary);
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 20px;
+  background: var(--glass-bg);
+  color: var(--neon);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: var(--neon);
+  color: #000;
+  transform: translateX(-5px);
+  box-shadow: 0 0 15px var(--neon);
+}

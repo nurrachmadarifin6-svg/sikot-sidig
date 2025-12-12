@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Buku Kegiatan</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="notulensi" class="notulensi">
+      <h3>Admin Buku Agenda Kegiatan</h3>
+      <p>Isi Form untuk menambahkan Data Agenda Kegiatan.</p>
+      <div class="notulensi-section" id="notulensiList"></div>
+    </div>
+    <section id="agenda" class="agenda-section">
+      <h2>Data Agenda Kegiatan</h2>
+
+      <form
+        id="agendaForm"
+        class="agenda-form"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbyKugJPvGxp2KfTkmfHyNIS2ZKrtPi8VMwR2_h5mO3fQtxDE0jhfFC8NGKC0dfJVqk/exec"
+      >
+        <label>Nama</label>
+        <input
+          name="nama"
+          type="text"
+          required
+          placeholder="Masukkan nama barang"
+        />
+
+        <label>Sasaran</label>
+        <input
+          name="sasaran"
+          type="text"
+          required
+          placeholder="Masukkan Sasaran"
+        />
+
+        <label>Target</label>
+        <input
+          name="target"
+          type="text"
+          required
+          placeholder="Masukkan Target"
+        />
+
+        <label>Keterangan</label>
+        <input
+          name="keterangan"
+          type="text"
+          required
+          placeholder="Masukkan Keterangan"
+        />
+
+        <button type="submit">Kirim</button>
+
+        <p id="agenda-status"></p>
+      </form>
+    </section>
+    <a class="back-btn" href="/admin/divisi/administrasi/administrasi.html">← Kembali</a>
+    <script src="/admin/divisi/administrasi/agenda/script.js"></script>
+  </body>
+</html>

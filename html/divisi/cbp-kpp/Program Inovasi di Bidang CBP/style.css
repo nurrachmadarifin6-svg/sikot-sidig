@@ -1,0 +1,152 @@
+/* =========================================
+   ROOT COLOR
+========================================= */
+:root {
+  --primary: #05f2d4;
+  --neon: #00fff2;
+  --glass-bg: rgba(0, 0, 0, 0.35);
+  --glass-border: rgba(0, 255, 255, 0.3);
+  --white: #fff;
+  --black: #000;
+}
+
+/* =========================================
+   GLOBAL
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: var(--white);
+  padding: 20px;
+}
+
+/* =========================================
+   HEADER BOX
+========================================= */
+.notulensi {
+  width: 100%;
+  margin: 0 auto 30px;
+  padding: 25px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.notulensi h3 {
+  font-size: 1.8rem;
+  color: var(--neon);
+  margin-bottom: 10px;
+}
+
+.notulensi p {
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+/* =========================================
+   TABLE BOX
+========================================= */
+.box {
+  width: 100%;
+  margin: auto;
+  padding: 25px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 22px;
+  backdrop-filter: blur(10px);
+}
+
+.box h1 {
+  text-align: center;
+  color: var(--neon);
+  margin-bottom: 20px;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+button {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  background: var(--neon);
+  color: #000;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--neon);
+}
+
+/* =========================================
+   TABLE DESIGN
+========================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+thead tr {
+  background: var(--glass-border);
+}
+
+th {
+  padding: 12px;
+  font-size: 1rem;
+  color: var(--neon);
+  text-align: center;
+}
+
+tbody tr {
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--glass-border);
+  transition: 0.2s ease;
+}
+
+tbody tr:hover {
+  background: rgba(0, 255, 255, 0.1);
+}
+
+td {
+  padding: 12px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 20px;
+  background: var(--glass-bg);
+  color: var(--neon);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: var(--neon);
+  color: #000;
+  transform: translateX(-5px);
+  box-shadow: 0 0 15px var(--neon);
+}

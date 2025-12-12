@@ -1,0 +1,247 @@
+/* =========================================
+   SUPER PREMIUM ROOT COLOR
+========================================= */
+:root {
+  --primary: #05f2d4;
+  --neon: #00fff2;
+  --neon-strong: #35ffff;
+  --glass-bg: rgba(0, 0, 0, 0.45);
+  --glass-border: rgba(0, 255, 255, 0.35);
+  --white: #fff;
+  --black: #000;
+  --shadow-neon: 0 0 8px #00fff2, 0 0 16px #00fff2, 0 0 30px #00e0ff;
+}
+
+/* =========================================
+   GLOBAL PREMIUM STYLE
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #001519 0%, #000 70%);
+  color: var(--white);
+  padding: 30px;
+  overflow-x: hidden;
+  animation: fadeIn 1s ease;
+}
+
+/* Floating cyber particles */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("https://i.imgur.com/zY9Z9Zy.png");
+  opacity: 0.15;
+  pointer-events: none;
+  animation: particleMove 22s linear infinite;
+}
+
+/* =========================================
+   HEADER / NOTULENSI SUPER PREMIUM
+========================================= */
+.notulensi {
+  width: 100%;
+  padding: 25px;
+  margin-bottom: 30px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.18);
+  animation: slideDown 0.8s ease;
+}
+
+.notulensi h3 {
+  font-size: 32px;
+  color: var(--neon);
+  text-shadow: var(--shadow-neon);
+  margin-bottom: 8px;
+  animation: glowPulse 2.5s infinite ease-in-out;
+}
+
+.notulensi p {
+  color: var(--primary);
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* =========================================
+   BOX WRAPPER
+========================================= */
+.box {
+  width: 100%;
+  padding: 25px;
+  background: var(--glass-bg);
+  border-radius: 18px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  animation: fadeUp 1s ease;
+}
+
+.box h1 {
+  text-align: center;
+  font-size: 28px;
+  color: var(--neon);
+  margin-bottom: 20px;
+  text-shadow: var(--shadow-neon);
+}
+
+/* =========================================
+   BUTTON SUPER PREMIUM
+========================================= */
+button {
+  display: block;
+  margin: 0 auto 25px;
+  padding: 14px 26px;
+  background: var(--neon);
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: 0.35s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px var(--neon-strong);
+}
+
+/* =========================================
+   TABLE SUPER PREMIUM
+========================================= */
+#alumniAdminTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  background: var(--glass-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.18);
+}
+
+#alumniAdminTable thead {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 255, 255, 0.18),
+    rgba(0, 180, 255, 0.22)
+  );
+}
+
+#alumniAdminTable th,
+#alumniAdminTable td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--white);
+  font-size: 16px;
+}
+
+#alumniAdminTable th {
+  color: var(--neon);
+  font-weight: 800;
+  text-shadow: var(--shadow-neon);
+}
+
+#alumniAdminTable tbody tr {
+  transition: 0.25s ease;
+}
+
+#alumniAdminTable tbody tr:hover {
+  background: rgba(0, 255, 255, 0.08);
+  transform: scale(1.01);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.18);
+}
+
+/* =========================================
+   BACK BUTTON SUPER PREMIUM
+========================================= */
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 24px;
+  background: var(--glass-bg);
+  color: var(--neon);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  text-decoration: none;
+  transition: 0.4s ease;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-shadow: 0 0 6px var(--neon);
+}
+
+.back-btn:hover {
+  background: var(--neon);
+  color: #000;
+  transform: translateX(-8px) scale(1.05);
+  box-shadow: 0 0 18px var(--neon-strong);
+}
+
+/* =========================================
+   ANIMATIONS SUPER PREMIUM
+========================================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 12px var(--neon);
+  }
+  50% {
+    text-shadow: 0 0 30px var(--neon-strong);
+  }
+  100% {
+    text-shadow: 0 0 12px var(--neon);
+  }
+}
+
+@keyframes particleMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-300px);
+  }
+}

@@ -1,0 +1,228 @@
+/* ======================================================
+      GLOBAL
+====================================================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: #000;
+  color: #eaffff;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #00fff2;
+  text-shadow: 0 0 20px #00fff2, 0 0 45px rgba(0, 255, 255, 0.6);
+}
+
+/* ======================================================
+      TABLE STYLING — Neon Glass
+====================================================== */
+#dataTable {
+  width: 92%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.35), 0 0 60px rgba(0, 255, 255, 0.18);
+}
+
+#dataTable thead {
+  background: rgba(0, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+#dataTable th {
+  padding: 14px;
+  font-size: 1.15rem;
+  color: #00fff2;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.35);
+  text-shadow: 0 0 12px #00fff2;
+}
+
+#dataTable td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 1.05rem;
+  transition: 0.25s ease;
+}
+
+/* Row Hover Effect */
+#dataTable tbody tr:hover {
+  background: rgba(0, 255, 255, 0.12);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+  transform: scale(1.01);
+}
+
+/* ======================================================
+      TABLE INLINE INPUT
+====================================================== */
+.table-edit-input {
+  width: 95%;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 255, 0.4);
+
+  background: rgba(0, 0, 0, 0.35);
+  color: #a8ffff;
+
+  outline: none;
+  transition: 0.25s;
+}
+
+.table-edit-input:focus {
+  border-color: #00fff2;
+  box-shadow: 0 0 15px #00fff2;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* ======================================================
+      ACTION BUTTONS (Update, Hapus)
+====================================================== */
+td button {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: none;
+  margin: 2px 0;
+
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+
+  background: rgba(0, 255, 255, 0.15);
+  color: #00fff2;
+  border: 1px solid rgba(0, 255, 255, 0.4);
+
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.28),
+    inset 0 0 12px rgba(0, 255, 255, 0.22);
+
+  transition: 0.3s ease-in-out;
+}
+
+td button:hover {
+  background: #00fff2;
+  color: #000;
+  transform: scale(1.07);
+  box-shadow: 0 0 25px #00fff2;
+}
+
+/* Button Delete khusus warna merah */
+td button:nth-child(2) {
+  border-color: rgba(255, 0, 0, 0.5);
+  color: #ff8c8c;
+  background: rgba(255, 0, 0, 0.15);
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+}
+
+td button:nth-child(2):hover {
+  background: red;
+  color: #fff;
+  box-shadow: 0 0 25px red;
+}
+
+/* ======================================================
+      FORM TAMBAH DATA
+====================================================== */
+h3 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2rem;
+  color: #00fff2;
+  text-shadow: 0 0 15px #00fff2;
+}
+
+#addForm {
+  width: 90%;
+  margin: 25px auto;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.25),
+    inset 0 0 18px rgba(0, 255, 255, 0.22);
+}
+
+#addForm input {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 255, 0.4);
+
+  background: rgba(0, 0, 0, 0.35);
+  color: #dfffff;
+
+  font-size: 1rem;
+  outline: none;
+  transition: 0.25s;
+}
+
+#addForm input:focus {
+  border-color: #00fff2;
+  box-shadow: 0 0 17px #00fff2;
+}
+
+/* Submit Button */
+#addForm button {
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+
+  background: #00fff2;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-shadow: 0 0 20px #00fff2;
+  transition: 0.3s;
+}
+
+#addForm button:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 35px #00fff2;
+}
+
+/* ======================================================
+      BACK BUTTON
+====================================================== */
+.back-btn {
+  display: inline-block;
+  margin: 35px 0 50px 5%;
+  padding: 12px 22px;
+
+  color: #00fff2;
+  font-size: 1.15rem;
+  text-decoration: none;
+
+  border-radius: 14px;
+  border: 1px solid rgba(0, 255, 255, 0.45);
+
+  background: rgba(0, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.45),
+    inset 0 0 15px rgba(0, 255, 255, 0.25);
+
+  transition: 0.35s ease;
+}
+
+.back-btn:hover {
+  background: #00fff2;
+  color: #000;
+  transform: translateX(-6px) scale(1.05);
+  box-shadow: 0 0 35px #00fff2;
+}

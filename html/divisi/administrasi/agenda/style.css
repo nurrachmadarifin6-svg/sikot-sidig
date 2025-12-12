@@ -1,0 +1,152 @@
+/* =========================================
+   ROOT COLORS
+========================================= */
+:root {
+  --neon: #00fff2;
+  --primary: #05f2d4;
+  --glass-bg: rgba(0, 0, 0, 0.35);
+  --glass-border: rgba(0, 255, 255, 0.25);
+  --white: #fff;
+}
+
+/* =========================================
+   GLOBAL
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: var(--white);
+  padding: 20px;
+}
+
+/* =========================================
+   HEADER BOX (INFO)
+========================================= */
+.notulensi {
+  width: 100%;
+  margin: 0 auto 30px;
+  padding: 25px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.notulensi h3 {
+  font-size: 1.8rem;
+  color: var(--neon);
+  margin-bottom: 10px;
+}
+
+.notulensi p {
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+/* =========================================
+   CONTENT BOX
+========================================= */
+.box {
+  width: 100%;
+  margin: auto;
+  padding: 25px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.box h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: var(--neon);
+}
+
+/* =========================================
+   TABLE
+========================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background: rgba(0, 255, 255, 0.1);
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+  color: var(--neon);
+  font-size: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+tbody tr {
+  transition: 0.2s ease;
+}
+
+tbody tr:hover {
+  background: rgba(0, 255, 255, 0.07);
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--white);
+}
+
+/* =========================================
+   RELOAD BUTTON
+========================================= */
+button {
+  padding: 12px 18px;
+  background: var(--neon);
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: block;
+  margin: 10px 0 20px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--neon);
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 20px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--neon);
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: var(--neon);
+  color: #000;
+  transform: translateX(-5px);
+  box-shadow: 0 0 15px var(--neon);
+}

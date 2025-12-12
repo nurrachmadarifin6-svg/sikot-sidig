@@ -1,0 +1,105 @@
+/* ============================================
+     RESET & BASE
+============================================ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: #000; /* Full black premium */
+  color: #fff;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2.5rem;
+  color: #00f9ff;
+  text-shadow: 0 0 15px #00f9ff, 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+/* ============================================
+     TABLE WRAPPER
+============================================ */
+#dataTable {
+  width: 90%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 255, 0.12);
+
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.25), 0 0 50px rgba(0, 255, 255, 0.15);
+}
+
+/* Header */
+#dataTable thead {
+  background: rgba(0, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+#dataTable th {
+  padding: 15px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: #00f9ff;
+
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  text-shadow: 0 0 10px #00f9ff;
+}
+
+/* Body Cells */
+#dataTable td {
+  padding: 14px;
+  font-size: 1rem;
+  color: #e2faff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.2s ease;
+}
+
+/* Hover row glow */
+#dataTable tbody tr:hover {
+  background: rgba(0, 255, 255, 0.1);
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Alternate row subtle effect */
+#dataTable tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ============================================
+     BACK BUTTON
+============================================ */
+.back-btn {
+  display: inline-block;
+  margin: 30px auto;
+  margin-left: 5%;
+  padding: 12px 20px;
+
+  color: #00f9ff;
+  font-size: 1.1rem;
+  text-decoration: none;
+
+  border-radius: 14px;
+  border: 1px solid rgba(0, 255, 255, 0.4);
+
+  background: rgba(0, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5),
+    inset 0 0 15px rgba(0, 255, 255, 0.25);
+
+  transition: 0.3s ease;
+}
+
+/* Hover glowing */
+.back-btn:hover {
+  color: #000;
+  background: #00f9ff;
+  box-shadow: 0 0 25px #00f9ff, 0 0 45px rgba(0, 255, 255, 0.8);
+  transform: translateX(-5px) scale(1.05);
+}

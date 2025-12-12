@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload & Arsip LPJ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h2 class="title">Upload File LPJ</h2>
+
+    <div class="upload-box">
+      <input type="file" id="lpjInput" />
+      <button onclick="uploadLpj()">Upload</button>
+    </div>
+
+    <h2 class="title">Daftar Laporan Pertanggungjawaban (LPJ)</h2>
+
+    <!-- FIX: id ditutup dengan benar -->
+    <div id="lpjContainer" class="grid"></div>
+
+    <a class="back-btn" href="/admin/divisi/administrasi/administrasi.html">
+      ← Kembali
+    </a>
+
+    <script src="/admin/divisi/administrasi/LPJ/script.js"></script>
+  </body>
+</html>

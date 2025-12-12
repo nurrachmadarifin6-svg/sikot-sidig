@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buku Surat Masuk dan Surat Keluar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="notulensi" class="notulensi">
+      <h3>Buku Surat Masuk dan Surat Keluar</h3>
+      <p>Klik dokumen berikut untuk mengunduh Buku Pedoman Organisasi.</p>
+      <div class="notulensi-section" id="notulensiList"></div>
+    </div>
+    <section id="masuk" class="masuk-section">
+      <h2>Surat Masuk</h2>
+
+      <form
+        id="masukForm"
+        class="masuk-form"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbwE-NVS8-IH9WrPjN2Ht3kY6u9cRk3GabTo-Wi8j7MJNfl7fPqZ0LbQCbDyTJeCW9aE/exec"
+      >
+        <label>Nomor Surat</label>
+        <input
+          name="nomor"
+          type="text"
+          required
+          placeholder="Masukkan Nomor Surat"
+        />
+
+        <label>Nama Kegiatan</label>
+        <input
+          name="kegiatan"
+          type="text"
+          required
+          placeholder="Masukkan Nama Kegiatan"
+        />
+
+        <label>Asal Surat</label>
+        <input
+          name="asal"
+          type="text"
+          required
+          placeholder="Masukkan Asal Pengirim Surat"
+        />
+
+        <button type="submit">Kirim</button>
+
+        <p id="masuk-status"></p>
+      </form>
+    </section>
+
+    <section id="keluar" class="keluar-section">
+      <h2>Surat Keluar</h2>
+
+      <form
+        id="keluarForm"
+        class="keluar-form"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbwMRLA3NpWJQDEGINmyfBNRjpyzcmRkUZY19jNgdbmB7JI9vAjvgdFmh1gfnCV5j_U/exec"
+      >
+        <label>Nomor Surat</label>
+        <input
+          name="nomor"
+          type="text"
+          required
+          placeholder="Masukkan Nomor Surat"
+        />
+
+        <label>Nama Kegiatan</label>
+        <input
+          name="kegiatan"
+          type="text"
+          required
+          placeholder="Masukkan Nama Kegiatan"
+        />
+
+        <label>Tujuan Surat</label>
+        <input
+          name="tujuan"
+          type="text"
+          required
+          placeholder="Masukkan Tujuan alamat surat"
+        />
+
+        <button type="submit">Kirim</button>
+
+        <p id="keluar-status"></p>
+      </form>
+    </section>
+
+    <a class="back-btn" href="/admin/divisi/administrasi/administrasi.html"
+      >← Kembali</a
+    >
+    <script src="/admin/divisi/administrasi/surat/script.js"></script>
+  </body>
+</html>

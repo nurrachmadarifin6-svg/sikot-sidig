@@ -1,0 +1,196 @@
+/* =========================================
+   ROOT COLOR
+========================================= */
+:root {
+  --primary: #05f2d4;
+  --neon: #00fff2;
+  --glass-bg: rgba(0, 0, 0, 0.35);
+  --glass-border: rgba(0, 255, 255, 0.3);
+  --white: #fff;
+  --black: #000;
+}
+
+/* =========================================
+   GLOBAL STYLE
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: var(--white);
+  padding: 20px;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+h2,
+h3 {
+  color: var(--neon);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* =========================================
+   TABLE STYLE
+========================================= */
+#dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background: var(--glass-bg);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+}
+
+#dataTable thead {
+  background: rgba(0, 255, 255, 0.15);
+}
+
+#dataTable th,
+#dataTable td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--white);
+}
+
+#dataTable tbody tr:hover {
+  background: rgba(0, 255, 255, 0.08);
+}
+
+/* Header */
+#dataTable th {
+  color: var(--neon);
+  font-weight: 700;
+}
+
+/* =========================================
+   INPUT EDIT MODE (Inside Table)
+========================================= */
+.table-edit-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.table-edit-input:focus {
+  border-color: var(--neon);
+  box-shadow: 0 0 10px var(--neon);
+  outline: none;
+}
+
+/* =========================================
+   FORM TAMBAH DATA
+========================================= */
+form {
+  width: 100%;
+  padding: 20px;
+  background: var(--glass-bg);
+  border-radius: 18px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+form input:focus {
+  border-color: var(--neon);
+  box-shadow: 0 0 10px var(--neon);
+  outline: none;
+}
+
+/* =========================================
+   BUTTON GLOBAL
+========================================= */
+button {
+  padding: 12px 15px;
+  background: var(--neon);
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px var(--neon);
+}
+
+/* =========================================
+   ACTION BUTTONS (UPDATE / HAPUS)
+========================================= */
+td button {
+  padding: 8px 12px;
+  margin: 2px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Tombol Update */
+td button:first-child {
+  background: var(--primary);
+  color: #000;
+}
+
+td button:first-child:hover {
+  box-shadow: 0 0 10px var(--primary);
+}
+
+/* Tombol Hapus */
+td button:last-child {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+td button:last-child:hover {
+  box-shadow: 0 0 10px #ff4d4d;
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+.back-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: var(--glass-bg);
+  color: var(--neon);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: var(--neon);
+  color: #000;
+  transform: translateX(-5px);
+  box-shadow: 0 0 15px var(--neon);
+}

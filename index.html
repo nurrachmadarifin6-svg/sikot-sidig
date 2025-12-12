@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <title>SIDIG (Sidoarjo Kota Digital)</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Stack+Sans+Notch:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <a href="/admin/index.html" class="navbar-logo">
+        Pelajar NU <span>Kecamatan Sidoarjo Kota</span>
+      </a>
+
+      <div class="navbar-nav">
+        <!-- HOME -->
+        <!-- PROFIL -->
+        <div class="dropdown">
+          <a href="#about" class="dropdown-btn">Profil ▾</a>
+          <div class="dropdown-content">
+            <a href="#sejarah">Sejarah</a>
+            <a href="#visi">Visi & Misi</a>
+            <a href="#struktur">Struktur Organisasi</a>
+          </div>
+        </div>
+
+        <a href="#dashboard" class="dropdown-btn">Dashboard</a>
+        <!-- DATA ADMINISTRASI -->
+        <div class="dropdown">
+          <a href="#" class="dropdown-btn">Data Administrasi ▾</a>
+          <div class="dropdown-content">
+            <a href="#menu">Contoh Surat</a>
+            <a href="#pedoman">Buku Pedoman</a>
+            <a href="#alumni">Form Alumni Sidoarjo Kota</a>
+          </div>
+        </div>
+
+        <!-- KONTAK -->
+        <div class="dropdown">
+          <a href="#" class="dropdown-btn">Kontak ▾</a>
+          <div class="dropdown-content">
+            <a href="#lokasi">Lokasi</a>
+            <a href="#contact">Whatsapp</a>
+            <a href="#contact">Email</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="neon-beam"></div>
+      <div class="fog"></div>
+
+      <main class="content">
+        <h1>PAC IPNU IPPNU Kecamatan Sidoarjo Kota</h1>
+        <p>
+          Pelajar NU Sidoarjo adalah organisasi pelajar di bawah Nahdlatul Ulama
+          (NU). Kami berkomitmen mengembangkan potensi pelajar melalui kegiatan
+          edukatif, sosial, dan keagamaan.
+        </p>
+        <a href="#contact" class="cta">Pelajari Lebih Lanjut</a>
+      </main>
+    </section>
+
+    <section id="dashboard" class="dashboard-section">
+      <h2>Dashboard Divisi</h2>
+
+      <div class="dashboard-grid">
+        <a href="/html/divisi/administrasi/administrasi.html" class="dash-card"
+          >ADMINISTRASI</a
+        >
+        <a href="/html/divisi/organisasi/organisasi.html" class="dash-card"
+          >ORGANISASI</a
+        >
+        <a href="/html/divisi/kaderisasi/kaderisasi.html" class="dash-card"
+          >KADERISASI</a
+        >
+        <a href="/html/divisi/djsp/djsp.html" class="dash-card">KOMISARIAT</a>
+        <a href="/html/divisi/dakwah/dakwah.html" class="dash-card">DAKWAH</a>
+        <a href="/html/divisi/dosb/dosb.html" class="dash-card"
+          >OLAHRAGA & SENI</a
+        >
+        <a href="/html/divisi/pers/pers.html" class="dash-card">MEDIA</a>
+        <a href="/html/divisi/cbp-kpp/cbp-kpp.html" class="dash-card"
+          >CBP KPP</a
+        >
+      </div>
+    </section>
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <h2>Tentang Kami</h2>
+      <div class="row">
+        <div class="about-img">
+          <img
+            src="ChatGPT Image Nov 22, 2025, 03_04_40 AM.png"
+            alt="About Image"
+          />
+        </div>
+
+        <div class="about-content">
+          <h3>Visi dan Misi Kami</h3>
+          <p>
+            Visi kami adalah menjadi organisasi pelajar terdepan yang
+            menginspirasi generasi muda untuk berkontribusi positif.
+          </p>
+          <ul>
+            <li>Menyelenggarakan kegiatan edukatif dan keagamaan.</li>
+            <li>Mendorong partisipasi pelajar dalam kegiatan sosial.</li>
+            <li>Membangun jaringan antar pelajar di Kecamatan Sidoarjo.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATA ADMINISTRASI -->
+    <div>
+      <h2 class="title">Data Administrasi & Contoh Surat</h2>
+    </div>
+
+    <div id="docContainer" class="grid"></div>
+
+    <!-- LIST PEDOMAN -->
+    <div>
+      <h2 class="title">Buku Pedoman Organisasi</h2>
+    </div>
+
+    <div id="pedomanContainer" class="grid"></div>
+
+    <!-- FORM ALUMNI -->
+    <section id="alumni" class="alumni-section">
+      <h2>Form Data Alumni</h2>
+
+      <form
+        id="alumniForm"
+        class="alumni-form"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbxJpjpWA_3iX6PUULjb59XsvtZyQoUquNLcn_YelQKbj1IhnSABXlrIt8tUn6Tme8ef/exec"
+      >
+        <label>Nama Lengkap</label>
+        <input
+          name="nama"
+          type="text"
+          required
+          placeholder="Masukkan nama lengkap"
+        />
+
+        <label>Alamat</label>
+        <input
+          name="alamat"
+          type="text"
+          required
+          placeholder="Masukkan alamat"
+        />
+
+        <label>Nomor WA / HP</label>
+        <input name="wa" type="text" required placeholder="08xxxxxxxxxx" />
+
+        <button type="submit">Kirim Data Alumni</button>
+
+        <p id="alumni-status"></p>
+      </form>
+    </section>
+
+    <!-- MAP -->
+    <section id="lokasi" class="container section map">
+      <h2>Lokasi Kami</h2>
+      <p class="muted">Peta lokasi kantor/sekretariat.</p>
+
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.1682832839715!2d112.68858697379935!3d-7.446626173378332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e141e2c77a6f%3A0xe6eaec6930334ef7!2sGedung%20MWC%20NU%20Sidoarjo!5e0!3m2!1sen!2sid!4v1763315391332!5m2!1sen!2sid"
+          width="100%"
+          height="400"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <div
+        id="map-js"
+        style="height: 400px; margin-top: 1rem; display: none"
+      ></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container section contact">
+      <h2>Kontak</h2>
+
+      <div class="contact-grid">
+        <div>
+          <a
+            id="wa-link"
+            class="btn"
+            href="https://wa.me/6289635737500?text=Halo%20Pelajar%20NU%20Sidoarjo%20Kota"
+            target="_blank"
+            ><i data-feather="phone-call"></i> Hubungi Ketua IPNU</a
+          >
+
+          <a
+            id="wa-link"
+            class="btn"
+            href="https://wa.me/62895800127043?text=Halo%20Pelajar%20NU%20Sidoarjo%20Kota"
+            target="_blank"
+            ><i data-feather="phone-call"></i> Hubungi Ketua IPPNU</a
+          >
+        </div>
+
+        <div class="contact-info">
+          <h3>Alamat & Kontak</h3>
+          <p>
+            HM3R+8FV, Jl. Jati Sel. IV, Babatan, Jati, Kec. Sidoarjo, Kabupaten
+            Sidoarjo, Jawa Timur 61234
+          </p>
+          <p>WA: +62 896-3573-7500 / +62 895-8001-27043</p>
+          <p>Email: pacipnuippnusidoarjokota@gmail.com</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      feather.replace();
+    </script>
+    <script src="scripts.js"></script>
+
+    <footer class="footer">
+      <p>&copy; PAC IPNU IPPNU Kecamatan Sidoarjo. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

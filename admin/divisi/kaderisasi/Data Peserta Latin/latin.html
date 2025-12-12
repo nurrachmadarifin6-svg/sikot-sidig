@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Data Peserta Latin</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h2>Admin Data Peserta Latin</h2>
+
+    <table border="1" id="dataTable">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Alamat</th>
+          <th>Tahun Pengkaderan</th>
+          <th>WA</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h3>Tambah Data</h3>
+    <form id="addForm">
+      <input name="nama" placeholder="Nama" required />
+      <input name="alamat" placeholder="Alamat" required />
+      <input name="pengkaderan" type="date" required />
+      <input name="wa" placeholder="Nomor WA" required />
+      <button type="submit">Tambah</button>
+    </form>
+
+    <a class="back-btn" href="/admin/divisi/kaderisasi/kaderisasi.html"
+      >← Kembali</a
+    >
+
+    <script src="script.js"></script>
+  </body>
+</html>
