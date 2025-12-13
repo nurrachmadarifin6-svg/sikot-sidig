@@ -1,70 +1,116 @@
 /* ==============================
-   ROOT COLOR
+   SUPER PREMIUM ROOT COLOR
 ============================== */
 :root {
-  --primary-color: #05f2d4;
-  --glass-bg: rgba(0, 0, 0, 0.35);
-  --glass-border: rgba(0, 255, 255, 0.35);
+  --primary: #05f2d4;
   --neon: #00fff2;
-  --white: #ffffff;
+  --neon-strong: #35ffff;
+  --bg-dark: #02060a;
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(0, 255, 255, 0.35);
+  --text: #eaffff;
+  --muted: #9ff;
 }
 
 /* ==============================
-   GENERAL
+   GLOBAL RESET
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==============================
+   BODY + PARTICLE GLOW
 ============================== */
 body {
-  font-family: "Poppins", sans-serif;
-  background: #02060a;
-  color: var(--white);
-  margin: 0;
+  background: radial-gradient(circle at top, #04121c, var(--bg-dark));
+  color: var(--text);
+  min-height: 100vh;
   padding: 20px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Ambient glow */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -30%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.12), transparent 70%);
+  filter: blur(160px);
+  z-index: -1;
 }
 
 /* ==============================
-   TITLE & HEADINGS
+   TITLE & HEADING
 ============================== */
 .title,
 h1,
 h2 {
   text-align: center;
   color: var(--neon);
-  text-shadow: 0 0 10px var(--neon);
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.8);
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 4vw, 2rem);
 }
 
 /* ==============================
-   BOX / CONTAINER
+   BOX / PANEL
 ============================== */
 .box {
   max-width: 480px;
-  margin: 20px auto;
-  padding: 20px;
-  background: var(--glass-bg);
-  border: 2px solid var(--glass-border);
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
+  margin: 24px auto;
+  padding: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+  border-radius: 18px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15),
+    inset 0 0 20px rgba(0, 255, 255, 0.05);
 }
 
 /* ==============================
-   INPUT + BUTTON
+   INPUT
 ============================== */
+input[type="text"],
 input[type="password"],
-input[type="file"],
-input[type="text"] {
+input[type="file"] {
   width: 100%;
-  padding: 12px;
-  margin: 10px 0 15px;
-  border-radius: 8px;
-  border: 1px solid var(--neon);
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--white);
+  padding: 13px 14px;
+  margin: 10px 0 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  outline: none;
+  transition: 0.25s;
 }
 
 input::placeholder {
-  color: #b9ffff;
+  color: var(--muted);
+}
+
+input:focus {
+  border-color: var(--neon);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 /* ==============================
-   FIX: PLACEHOLDER TIDAK BERUBAH
+   PASSWORD TOGGLE
 ============================== */
 .password-wrapper {
   position: relative;
@@ -72,15 +118,12 @@ input::placeholder {
 
 .toggle-pass {
   position: absolute;
-  right: 12px;
+  right: 14px;
   top: 50%;
   transform: translateY(-50%);
-  cursor: pointer;
-  font-size: 18px;
   color: var(--neon);
-
-  /* FIX AGAR TIDAK MENGGANGGU FOKUS INPUT */
-  pointer-events: auto;
+  font-size: 18px;
+  cursor: pointer;
   user-select: none;
 }
 
@@ -90,52 +133,49 @@ input::placeholder {
 button,
 .logout {
   width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  background: var(--primary-color);
-  color: #000;
+  padding: 14px;
+  margin-top: 12px;
+  border-radius: 12px;
   border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
-  transition: 0.2s;
+  cursor: pointer;
+  color: #001;
+  background: linear-gradient(135deg, var(--primary), var(--neon));
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.6);
+  transition: 0.25s;
 }
 
 button:hover,
 .logout:hover {
-  background: var(--neon);
-  box-shadow: 0 0 12px var(--neon);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 1);
 }
+
+/* ==============================
+   BACK BUTTON / LINK
+============================== */
 .back-btn,
 a.box[href="/html/index.html"] {
-  display: inline-block;
-  width: fit-content;
-  padding: 10px 20px;
-  margin: 20px auto;
-  text-align: center;
-
-  background: var(--glass-bg);
-  border: 2px solid var(--glass-border);
-  border-radius: 12px;
-
+  display: block;
+  margin: 22px auto;
+  width: max-content;
+  padding: 12px 24px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--glass-border);
   color: var(--neon);
   text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-
-  backdrop-filter: blur(10px);
-
-  transition: 0.25s ease;
-  box-shadow: 0 0 6px rgba(0, 255, 255, 0.2);
+  font-weight: 600;
+  backdrop-filter: blur(12px);
+  transition: 0.25s;
 }
 
 .back-btn:hover,
 a.box[href="/html/index.html"]:hover {
-  background: rgba(0, 255, 255, 0.15);
-  color: var(--white);
-  border-color: var(--neon);
-  box-shadow: 0 0 15px var(--neon);
+  color: #fff;
+  background: rgba(0, 255, 255, 0.18);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.9);
   transform: translateY(-3px);
 }
 
@@ -144,26 +184,26 @@ a.box[href="/html/index.html"]:hover {
 ============================== */
 .dashboard-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 18px;
+  margin-top: 25px;
 }
 
 .dash-card {
-  padding: 20px;
+  padding: 22px;
   text-align: center;
-  background: var(--glass-bg);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--glass-border);
-  border-radius: 12px;
-  color: var(--white);
-  text-decoration: none;
-  font-weight: bold;
+  color: var(--text);
+  font-weight: 600;
   transition: 0.3s;
 }
 
 .dash-card:hover {
-  background: rgba(0, 255, 255, 0.2);
-  box-shadow: 0 0 15px var(--neon);
+  transform: translateY(-6px) scale(1.04);
+  background: rgba(0, 255, 255, 0.18);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.9);
 }
 
 /* ==============================
@@ -171,22 +211,23 @@ a.box[href="/html/index.html"]:hover {
 ============================== */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
   margin-top: 20px;
 }
 
 .card {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  padding: 15px;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 16px;
   text-align: center;
+  border: 1px solid var(--glass-border);
   transition: 0.3s;
 }
 
 .card:hover {
-  background: rgba(0, 255, 255, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.8);
 }
 
 /* ==============================
@@ -194,17 +235,115 @@ a.box[href="/html/index.html"]:hover {
 ============================== */
 table {
   width: 100%;
+  margin-top: 18px;
   border-collapse: collapse;
-  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 th,
 td {
-  border: 1px solid var(--glass-border);
-  padding: 10px;
-  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid var(--glass-border);
 }
 
 th {
-  background: rgba(0, 255, 255, 0.1);
+  background: rgba(0, 255, 255, 0.15);
+  color: var(--neon);
+}
+
+tr:hover td {
+  background: rgba(0, 255, 255, 0.08);
+}
+
+/* ==============================
+   MOBILE OPTIMIZATION
+============================== */
+@media (max-width: 600px) {
+  body {
+    padding: 14px;
+  }
+
+  .box {
+    padding: 18px;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+}
+
+/* ==============================
+   SUPER PREMIUM BACK BUTTON
+============================== */
+.back-btn,
+a.box[href="/html/index.html"] {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 26px auto;
+  padding: 14px 26px;
+
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  color: var(--neon);
+  text-decoration: none;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 255, 0.15),
+    rgba(0, 255, 255, 0.03)
+  );
+
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(14px);
+
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.35),
+    inset 0 0 12px rgba(0, 255, 255, 0.25);
+
+  transition: 0.35s ease;
+  overflow: hidden;
+}
+
+/* GARIS NEON BERJALAN */
+.back-btn::before,
+a.box[href="/html/index.html"]::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(120deg, transparent, var(--neon), transparent);
+  opacity: 0.6;
+  animation: neonFlow 2.8s linear infinite;
+}
+
+/* HOVER (DESKTOP) */
+.back-btn:hover,
+a.box[href="/html/index.html"]:hover {
+  color: #001;
+  background: linear-gradient(135deg, var(--neon), var(--primary));
+  box-shadow: 0 0 30px var(--neon);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* MOBILE ACTIVE (TAP) */
+.back-btn:active,
+a.box[href="/html/index.html"]:active {
+  transform: scale(0.97);
+}
+
+/* ANIMASI NEON */
+@keyframes neonFlow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }

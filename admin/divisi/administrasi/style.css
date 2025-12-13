@@ -205,3 +205,104 @@ body::after {
   box-shadow: 0 0 20px rgba(0,255,200,0.4);
   transform: translateX(-4px);
 }
+
+/* =====================================================
+   RESPONSIVE – MOBILE & TABLET
+===================================================== */
+
+/* ===== TABLET (<= 992px) ===== */
+@media (max-width: 992px) {
+  .divisi-header h1 {
+    font-size: 2.4rem;
+  }
+
+  .divisi-section h2 {
+    font-size: 1.9rem;
+  }
+
+  .arsip-list {
+    gap: 20px;
+    padding: 15px;
+  }
+}
+
+/* ===== MOBILE (<= 768px) ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  /* HEADER */
+  .divisi-header {
+    padding: 40px 15px;
+    margin-bottom: 30px;
+  }
+
+  .divisi-header h1 {
+    font-size: 2rem;
+  }
+
+  .divisi-header p {
+    font-size: 1rem;
+  }
+
+  /* JUDUL SECTION */
+  .divisi-section h2 {
+    font-size: 1.6rem;
+    padding: 10px;
+  }
+
+  /* GRID ARSIP */
+  .arsip-list {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 10px;
+  }
+
+  .arsip-item {
+    padding: 18px;
+    font-size: 1rem;
+  }
+
+  /* TABLE RESPONSIVE */
+  .arsip-section {
+    padding: 18px;
+  }
+
+  .arsip-table {
+    font-size: 0.9rem;
+  }
+
+  .arsip-table th,
+  .arsip-table td {
+    padding: 10px;
+  }
+
+  /* BACK BUTTON */
+  .back-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    font-size: 1rem;
+  }
+}
+
+/* ===== SMALL MOBILE (<= 480px) ===== */
+@media (max-width: 480px) {
+  .divisi-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .divisi-section h2 {
+    font-size: 1.4rem;
+  }
+
+  /* TABLE SCROLL HORIZONTAL */
+  .arsip-section {
+    overflow-x: auto;
+  }
+
+  .arsip-table {
+    min-width: 520px;
+  }
+}

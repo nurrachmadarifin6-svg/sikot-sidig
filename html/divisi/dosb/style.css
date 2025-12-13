@@ -218,3 +218,44 @@ body::after {
   box-shadow: 0 0 20px rgba(0, 255, 200, 0.4);
   transform: translateX(-4px);
 }
+
+/* =====================================
+   RESPONSIVE MOBILE FRIENDLY
+===================================== */
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+  .divisi-header h1 {
+    font-size: 2.4rem;
+  }
+
+  .divisi-section h2 {
+    font-size: 1.9rem;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 14px;
+  }
+}
+  /* HEADER */
+  .divisi-header {
+    padding: 40px 15px;
+    margin-bottom: 30px;
+  }
+
+  .divisi-header h1 {
+    font-size: 2rem;
+  }
+
+  .divisi-header p {
+    font-size: 1rem;
+  }
+
+  /* JUDUL SECTION */
+  .divisi-section h2 {
+    font-size: 1.6rem;
+    padding: 1
+  }
