@@ -304,91 +304,70 @@ body {
 }
 
 /* ABOUT SECTION */
+/* ============================
+   ABOUT SECTION – ULTRA MATRIX
+=============================== */
 .about {
+  position: relative;
   padding: 8rem 7%;
+  background: radial-gradient(
+      circle at top,
+      rgba(0, 255, 200, 0.08),
+      transparent 60%
+    ),
+    #000;
+  color: #eafff9;
+  overflow: hidden;
+}
+
+/* MATRIX FLOATING GLOW */
+.about::before {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background: radial-gradient(circle, rgba(0, 255, 200, 0.12), transparent 70%);
+  filter: blur(160px);
+  animation: aboutGlow 14s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes aboutGlow {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-40px) scale(1.1);
+  }
+}
+
+/* ============================
+   SECTION TITLE
+=============================== */
+.about > h2 {
+  position: relative;
+  z-index: 2;
   text-align: center;
   font-size: 3rem;
-  background: #000; /* full black */
-  color: var(--white);
+  margin-bottom: 3rem;
+  color: var(--neon);
+  text-shadow: 0 0 10px var(--neon), 0 0 25px rgba(0, 255, 255, 0.6),
+    0 0 45px rgba(0, 255, 255, 0.4);
+  letter-spacing: 2px;
 }
 
-/* Title */
-.about h2 {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  color: var(--white);
-  text-shadow: 0 0 15px var(--neon), 0 0 30px rgba(0, 255, 255, 0.4);
-}
-
-/* Image Wrapper */
-.about .about-img {
+/* ============================
+   CONTENT WRAPPER
+=============================== */
+.about .row {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-/* Image inside */
-.about .about-img img {
-  width: 100%;
-  max-width: 80rem;
-  border-radius: 12px;
-
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
-
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.25), 0 0 40px rgba(0, 255, 255, 0.15),
-    0 0 60px rgba(0, 255, 255, 0.1);
-
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Hover 3D tilt */
-.about .about-img img:hover {
-  transform: perspective(1000px) rotateX(4deg) rotateY(-4deg) scale(1.03);
-  box-shadow: 0 0 25px var(--neon), 0 0 50px rgba(0, 255, 255, 0.5);
-}
-
-/* Content Paragraph */
-.about .about-content p {
-  margin-top: 2rem;
-  font-size: 1.3rem;
-  line-height: 1.7;
-  max-width: 65rem;
-  margin-left: auto;
-  margin-right: auto;
-  color: rgba(255, 255, 255, 0.75);
-
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
-}
-
-/* UL style */
-.about .about-content ul {
-  margin-top: 2rem;
-  padding-left: 2rem;
-  display: inline-block;
-  text-align: left;
-}
-
-/* List */
-.about .about-content ul li {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.75);
-
-  padding: 10px 15px;
-  border-left: 2px solid var(--neon);
-
-  transition: 0.3s ease;
-}
-
-/* Hover glow */
-.about .about-content ul li:hover {
-  color: var(--white);
-  border-left: 2px solid var(--primary-color);
-
-  text-shadow: 0 0 10px var(--neon);
-  transform: translateX(8px);
+.about .about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 40px 35px;
 }
 
 /* ============================
@@ -1304,4 +1283,3 @@ body {
     font-size: 55%;
   }
 }
-
