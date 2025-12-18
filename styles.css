@@ -389,6 +389,14 @@ body {
 }
 
 /* Glow Hover */
+.navbar .dropdown-btn {
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
 .navbar .dropdown-btn:hover {
   color: var(--neon);
   text-shadow: 0 0 10px var(--neon);
@@ -1281,5 +1289,141 @@ body {
 @media (max-width: 480px) {
   html {
     font-size: 55%;
+  }
+}
+
+/* ================================
+   DASHBOARD STRUKTUR ORGANISASI
+================================ */
+
+section {
+  padding: 2rem 1rem;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--neon);
+  margin-bottom: 0.5rem;
+}
+
+section p {
+  text-align: center;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+/* Headings */
+section h3 {
+  margin-top: 2rem;
+  color: var(--neon);
+  border-left: 4px solid var(--neon);
+  padding-left: 0.75rem;
+}
+
+section h4 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: #e0f2ff;
+}
+
+/* List style */
+section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+section ul li {
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  margin-bottom: 0.4rem;
+  transition: background 0.25s ease;
+}
+
+section ul li:hover {
+  background: rgba(56, 189, 248, 0.15);
+}
+
+/* ====== DETAILS DASHBOARD CARD ====== */
+
+details {
+  background: rgba(15, 23, 42, 0.75);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+details:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(56, 189, 248, 0.25);
+}
+
+/* Summary = Header Card */
+details summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.05rem;
+  color: var(--neon);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+/* Remove default arrow */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom arrow */
+details summary::after {
+  content: "▸";
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+details[open] summary::after {
+  transform: rotate(90deg);
+}
+
+/* Content animation */
+details > *:not(summary) {
+  margin-top: 0.8rem;
+  animation: fadeSlide 0.35s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Divider */
+hr {
+  margin: 2rem 0;
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--neon), transparent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  details summary {
+    font-size: 1rem;
   }
 }
