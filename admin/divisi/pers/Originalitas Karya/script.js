@@ -1,19 +1,23 @@
-function loadNotulensi() {
-  const container = document.getElementById("notulensiList");
-  container.innerHTML = "";
+const API =
+  "https://script.google.com/macros/s/AKfycbwU0QZi-CPuPanNHS0D1jD6C5jUgpQ_6cE1Vc9F0WKlj5hKePqN6ar_xUwj6Oa7sg/exec";
+const token = prompt("Token Admin");
 
-  const pedoman = JSON.parse(localStorage.getItem("notulensi")) || [];
-
-  pedoman.forEach((doc) => {
-    const div = document.createElement("div");
-    div.classList.add("notulensi-card");
-
-    div.innerHTML = `
-      <h3>${doc.title}</h3>
-      <img src="${doc.image}" alt="${doc.title}">
-      <a href="${doc.file}" download><button>Download</button></a>
-    `;
-
-    container.appendChild(div);
+fetch(API, {
+  method: "POST",
+  body: JSON.stringify({ action: "dashboard", token }),
+})
+  .then((r) => r.json())
+  .then((d) => {
+    new Chart(chart, {
+      type: "bar",
+      data: {
+        labels: ["Karya", "Like", "Komentar", "User"],
+        datasets: [
+          {
+            data: [d.karya, d.likes, d.comments, d.users],
+            backgroundColor: ["#00ffe0", "#ff4d6d", "#00b3ff", "#ffc107"],
+          },
+        ],
+      },
+    });
   });
-}

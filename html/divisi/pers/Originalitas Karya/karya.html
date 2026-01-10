@@ -1,20 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Originalitas Karya</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="notulensi" class="notulensi">
-      <h3>Originalitas Karya</h3>
-      <p>Klik dokumen berikut untuk mengunduh.</p>
-      <div class="notulensi-section" id="notulensiList"></div>
-    </div>
-    <a class="back-btn" href="/html/divisi/administrasi/administrasi.html"
-      >← Kembali</a
-    >
-    <script src="/html/divisi/administrasi/notulensi/script.js"></script>
-  </body>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeri Karya Interaktif</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Galeri Karya Interaktif</h1>
+
+<!-- FORM UPLOAD -->
+<div class="upload">
+  <h3>Upload Karya</h3>
+  <input type="text" id="title" placeholder="Judul Karya" />
+  <input type="text" id="category" placeholder="Kategori" />
+  <input type="file" id="image" accept="image/*" />
+  <button id="uploadBtn">Upload</button>
+  <p id="uploadMsg"></p>
+</div>
+
+<!-- FILTER KATEGORI -->
+<div class="filter">
+  <label>Filter Kategori:</label>
+  <input type="text" id="filterCategory" placeholder="Masukkan kategori..." />
+</div>
+
+<!-- GALERI -->
+<div class="gallery" id="gallery"></div>
+
+<script src="script.js"></script>
+</body>
 </html>
